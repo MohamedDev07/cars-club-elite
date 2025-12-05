@@ -1,0 +1,43 @@
+# ده مثال بسيط عشان تفهم فكرة التعديل، هتحتاج تدخله بنفسك في الكود اللي هيظهرلك.
+
+name: Node.js Webpack Build and Deploy
+
+on:
+  push:
+    branches: ["main"] # تأكد إن اسم الفرع بتاعك مظبوط هنا (main أو master)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # ممكن تغيره لـ 18 حسب ما بتشتغل
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project (npm run build)
+        run: npm run build # الأمر ده هو اللي بيحول ملفات tsx إلى HTML/JS جاهزة
+
+      # -----------------------------------
+      # الخطوات الجديدة للنشر على GitHub Pages:
+      # -----------------------------------
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # المسار ده مهم، هو اللي فيه ناتج الـ Build (غالبًا dist أو build)
+          # لو المشروع بتاعك Vite هيكون اسمه dist
+          # لو react قديم هيكون اسمه build
+          path: './dist' 
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
