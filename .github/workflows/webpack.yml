@@ -1,43 +1,51 @@
-# ده مثال بسيط عشان تفهم فكرة التعديل، هتحتاج تدخله بنفسك في الكود اللي هيظهرلك.
-
-name: Node.js Webpack Build and Deploy
+name: Deploy Node.js Project to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # تأكد إن اسم الفرع بتاعك مظبوط هنا (main أو master)
+    branches: ["main"] # شغل الـ Workflow عند كل تحديث للفرع الرئيسي
+
+# === هذا هو الحل لمشكلة الصلاحيات (X الحمراء) ===
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# ===============================================
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      # هذا هو المجلد الذي ينتج بعد عملية 'npm run build'
+      # إذا كنت تستخدم React قديم، قد يكون 'build' بدلاً من 'dist'
+      BUILD_PATH: dist 
 
     steps:
-      - uses: actions/checkout@v4
-      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # ممكن تغيره لـ 18 حسب ما بتشتغل
+          node-version: '20' # يفضل استخدام نسخة LTS (18 أو 20)
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project (npm run build)
-        run: npm run build # الأمر ده هو اللي بيحول ملفات tsx إلى HTML/JS جاهزة
+      - name: Build project
+        run: npm run build # الأمر ده لازم يكون موجود في ملف package.json
 
       # -----------------------------------
-      # الخطوات الجديدة للنشر على GitHub Pages:
+      # خطوات النشر الرسمية (Deployment)
       # -----------------------------------
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # المسار ده مهم، هو اللي فيه ناتج الـ Build (غالبًا dist أو build)
-          # لو المشروع بتاعك Vite هيكون اسمه dist
-          # لو react قديم هيكون اسمه build
-          path: './dist' 
-          
+          # تحميل ناتج البناء من المسار 'dist'
+          path: ${{ env.BUILD_PATH }} 
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
