@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
+    --background: 0 0% 5%;
     --foreground: 0 0% 92%;
 
     --card: 0 0% 9%;
@@ -15,29 +15,28 @@
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 75 85% 45%;
+    --primary: 75 90% 48%;
     --primary-foreground: 0 0% 5%;
 
-    --secondary: 0 0% 14%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 92%;
 
-    --muted: 0 0% 18%;
+    --muted: 0 0% 16%;
     --muted-foreground: 0 0% 55%;
 
-    --accent: 75 85% 45%;
+    --accent: 75 90% 48%;
     --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 18%;
+    --border: 0 0% 16%;
     --input: 0 0% 15%;
-    --ring: 75 85% 45%;
+    --ring: 75 90% 48%;
 
     --radius: 0.75rem;
 
-    --neon: 75 85% 45%;
-    --neon-soft: 75 70% 40%;
+    --neon: 75 90% 48%;
   }
 }
 
@@ -58,46 +57,44 @@
 @layer utilities {
   .neon-text {
     color: hsl(var(--neon));
-    text-shadow: 0 0 8px hsl(var(--neon) / 0.4);
-  }
-
-  .neon-text-soft {
-    color: hsl(var(--neon));
+    text-shadow: 0 0 12px hsl(var(--neon) / 0.5), 
+                 0 0 24px hsl(var(--neon) / 0.3);
   }
 
   .neon-border {
-    border-color: hsl(var(--neon) / 0.6);
-    box-shadow: 0 0 8px hsl(var(--neon) / 0.2);
+    border-color: hsl(var(--neon) / 0.5);
+    box-shadow: 0 0 15px hsl(var(--neon) / 0.25);
   }
 
-  .hover-lift {
+  .hover-glow {
     @apply transition-all duration-300 ease-out;
   }
 
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px hsl(0 0% 0% / 0.4), 
-                0 0 12px hsl(var(--neon) / 0.15);
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--neon) / 0.3), 
+                0 8px 24px hsl(0 0% 0% / 0.4);
+    border-color: hsl(var(--neon) / 0.6);
   }
 
-  .card-glow {
-    @apply transition-all duration-300;
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
   }
 
-  .card-glow:hover {
-    border-color: hsl(var(--neon) / 0.5);
-    box-shadow: 0 0 20px hsl(var(--neon) / 0.1);
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px hsl(0 0% 0% / 0.5), 
+                0 0 16px hsl(var(--neon) / 0.2);
   }
 
   .gradient-dark {
-    background: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
+    background: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 3%) 100%);
   }
 
   .gradient-neon {
-    background: linear-gradient(135deg, hsl(var(--neon)) 0%, hsl(75 70% 35%) 100%);
+    background: linear-gradient(135deg, hsl(var(--neon)) 0%, hsl(75 80% 38%) 100%);
   }
 
   .gradient-card {
-    background: linear-gradient(145deg, hsl(0 0% 11%) 0%, hsl(0 0% 7%) 100%);
+    background: linear-gradient(145deg, hsl(0 0% 10%) 0%, hsl(0 0% 6%) 100%);
   }
 }

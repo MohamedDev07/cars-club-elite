@@ -1,86 +1,65 @@
 import logo from "@/assets/logo.jpg";
-import { ChevronDown, Truck, CreditCard, Shield } from "lucide-react";
+import { ChevronDown, Truck, CreditCard } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-20">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
+      <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--neon)) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
+          backgroundSize: '60px 60px'
         }} />
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-6">
           <img 
             src={logo} 
             alt="Cars Club Logo" 
-            className="h-40 w-40 md:h-48 md:w-48 mx-auto rounded-2xl border-2 border-primary/40 object-contain shadow-lg"
+            className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl neon-border object-contain"
           />
         </div>
 
         {/* Brand name */}
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-wider text-foreground">
-          CARS <span className="neon-text-soft">CLUB</span>
+        <h1 className="font-display text-4xl md:text-6xl font-bold mb-3 tracking-wider">
+          <span className="neon-text">CARS CLUB</span>
         </h1>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl font-display text-primary mb-4">
+        <p className="text-xl md:text-2xl font-display text-primary/90 mb-6">
           Car Tuning Parts 🏁
         </p>
 
         {/* Brands */}
-        <div className="flex items-center justify-center gap-3 md:gap-6 flex-wrap mb-8">
-          {["BMW", "Mercedes", "Audi", "Porsche"].map((brand) => (
-            <span 
-              key={brand}
-              className="px-4 py-2 bg-secondary/50 rounded-full text-sm md:text-base font-medium text-foreground/80 border border-border"
-            >
-              {brand}
-            </span>
-          ))}
-        </div>
+        <p className="text-base md:text-lg text-muted-foreground mb-8 font-medium tracking-wide">
+          BMW · Mercedes · Audi · Porsche
+        </p>
 
         {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+        <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap mb-10">
+          <div className="flex items-center gap-2 text-foreground/80">
             <Truck className="h-5 w-5 text-primary" />
             <span className="text-sm">Shipping All Egypt</span>
           </div>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+          <div className="flex items-center gap-2 text-foreground/80">
             <CreditCard className="h-5 w-5 text-primary" />
             <span className="text-sm">Cash On Delivery</span>
           </div>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <Shield className="h-5 w-5 text-primary" />
-            <span className="text-sm">Quality Guaranteed</span>
-          </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="#products"
-            className="px-8 py-3 gradient-neon rounded-full font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
-          >
-            View Products
-          </a>
-          <a 
-            href="https://wa.me/201015843591"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 bg-secondary border border-border rounded-full font-display font-semibold text-foreground hover:border-primary/50 transition-colors"
-          >
-            Contact Us
-          </a>
-        </div>
+        {/* CTA */}
+        <a 
+          href="#products"
+          className="inline-block px-10 py-4 gradient-neon rounded-full font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg"
+        >
+          View Products
+        </a>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
         <ChevronDown className="h-6 w-6 text-primary" />
       </div>
     </section>
