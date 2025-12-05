@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Check, ExternalLink } from "lucide-react";
 
 interface ProductCardProps {
   image: string;
@@ -9,44 +9,65 @@ interface ProductCardProps {
 const ProductCard = ({ image, title, delay = 0 }: ProductCardProps) => {
   return (
     <div 
-      className="group bg-card rounded-xl overflow-hidden border border-border card-hover opacity-0 animate-fade-in-up"
-      style={{ animationDelay: `${delay}ms` }}
+      className="group gradient-card rounded-xl overflow-hidden border border-border hover-lift"
+      style={{ 
+        animationDelay: `${delay}ms`,
+        opacity: 1
+      }}
     >
       {/* Image */}
       <div className="relative overflow-hidden aspect-[4/3]">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         
-        {/* Hover badge */}
-        <div className="absolute top-4 right-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Available Now
+        {/* Badge */}
+        <div className="absolute top-3 left-3 px-3 py-1 bg-primary/90 text-primary-foreground text-xs font-semibold rounded-full">
+          Available
         </div>
       </div>
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-display text-lg font-semibold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+        <h3 className="font-display text-base font-semibold text-foreground mb-4 line-clamp-2 group-hover:text-primary transition-colors leading-tight">
           {title}
         </h3>
         
-        <div className="space-y-2 text-sm text-muted-foreground mb-4">
-          <p>✓ Shipping all over Egypt</p>
-          <p>✓ Cash on Delivery</p>
+        <div className="space-y-2 text-sm text-muted-foreground mb-5">
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-primary" />
+            <span>Shipping all over Egypt</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-primary" />
+            <span>Cash on Delivery</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="h-4 w-4 text-primary" />
+            <span>Original Quality</span>
+          </div>
         </div>
 
-        <a 
-          href="https://wa.me/201015843591"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg font-medium transition-all duration-300 hover-glow"
-        >
-          <Phone className="h-4 w-4" />
-          Order Now
-        </a>
+        <div className="flex gap-2">
+          <a 
+            href="https://wa.me/201015843591"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg font-medium transition-all hover:opacity-90"
+          >
+            <Phone className="h-4 w-4" />
+            Order
+          </a>
+          <a 
+            href="tel:+201015843591"
+            className="px-4 py-3 bg-secondary border border-border rounded-lg text-foreground hover:border-primary/50 transition-colors"
+          >
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </div>
   );
