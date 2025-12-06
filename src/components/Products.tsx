@@ -12,7 +12,17 @@ import audiA5_B95 from "@/assets/Audi_A5_B9.5_Rs_Body_Kit.jpg";
 import bmw2_F22 from "@/assets/BMW_2-Series_F22_M2_Body_Kit.jpg";
 import bmw3_E90 from "@/assets/BMW_3-Series_E90_M3_Body_Kit.jpg";
 import bmw3_F30 from "@/assets/BMW_3-Series_F30_M3_Body_Kit.jpg";
-import bmw3_G20 from "@/assets/BMW_3-Series_G20_Lci_M3_Body_Kit.jpg";
+import bmw3_G20_Lci from "@/assets/BMW_3-Series_G20_Lci_M3_Body_Kit.jpg";
+import mercedesW177 from "@/assets/Mercedes_Benz_A-Class_W177_A45_AMG_Body_Kit.jpg";
+import bmw3_G20 from "@/assets/BMW_3-Series_G20_M3_Body_Kit.jpg";
+import bmw4_G22 from "@/assets/BMW_4-Series_G22_M4_Body_Kit.jpg";
+import bmw5_E60 from "@/assets/BMW_5-Series_E60_M5_Body_Kit.jpg";
+import bmw5_F10 from "@/assets/BMW_5-Series_F10_M5_Body_Kit.jpg";
+import bmw5_G30_Lci from "@/assets/BMW_5-Series_G30_Lci_M5_Body_Kit.jpg";
+import bmw5_G30 from "@/assets/BMW_5-Series_G30_M5_Body_Kit.jpg";
+import bmw6_F12 from "@/assets/BMW_6-Series_F12_M6_Body_Kit.jpg";
+import bmwX6_F16 from "@/assets/BMW_X-Series_X6_F16_X6M_Body_Kit.jpg";
+import bmwX6_G06 from "@/assets/BMW_X-Series_X6_G06_X6M_Body_Kit.jpg";
 
 const products = [
   {
@@ -68,8 +78,48 @@ const products = [
     title: "BMW 3-Series F30 M3 Body Kit"
   },
   {
-    image: bmw3_G20,
+    image: bmw3_G20_Lci,
     title: "BMW 3-Series G20 Lci M3 Body Kit"
+  },
+  {
+    image: mercedesW177,
+    title: "Mercedes Benz A-Class W177 A45 AMG Body Kit"
+  },
+  {
+    image: bmw3_G20,
+    title: "BMW 3-Series G20 M3 Body Kit"
+  },
+  {
+    image: bmw4_G22,
+    title: "BMW 4-Series G22 M4 Body Kit"
+  },
+  {
+    image: bmw5_E60,
+    title: "BMW 5-Series E60 M5 Body Kit"
+  },
+  {
+    image: bmw5_F10,
+    title: "BMW 5-Series F10 M5 Body Kit"
+  },
+  {
+    image: bmw5_G30_Lci,
+    title: "BMW 5-Series G30 Lci M5 Body Kit"
+  },
+  {
+    image: bmw5_G30,
+    title: "BMW 5-Series G30 M5 Body Kit"
+  },
+  {
+    image: bmw6_F12,
+    title: "BMW 6-Series F12 M6 Body Kit"
+  },
+  {
+    image: bmwX6_F16,
+    title: "BMW X-Series X6 F16 X6M Body Kit"
+  },
+  {
+    image: bmwX6_G06,
+    title: "BMW X-Series X6 G06 X6M Body Kit"
   }
 ];
 
