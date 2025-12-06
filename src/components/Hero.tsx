@@ -1,25 +1,19 @@
 import logo from "@/assets/logo.jpg";
 import { ChevronDown, Truck, CreditCard } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16">
+  return <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--neon)) 1px, transparent 0)`,
-          backgroundSize: '60px 60px'
-        }} />
+        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--neon)) 1px, transparent 0)`,
+        backgroundSize: '60px 60px'
+      }} />
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
         <div className="mb-6">
-          <img 
-            src={logo} 
-            alt="Cars Club Logo" 
-            className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl neon-border object-contain"
-          />
+          <img src={logo} alt="Cars Club Logo" className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl neon-border object-contain" />
         </div>
 
         {/* Brand name */}
@@ -29,13 +23,11 @@ const Hero = () => {
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl font-display text-primary/90 mb-6">
-          Car Tuning Parts 🏁
+          Car Tuning Parts 
         </p>
 
         {/* Brands */}
-        <p className="text-base md:text-lg text-muted-foreground mb-8 font-medium tracking-wide">
-          BMW · Mercedes · Audi · Porsche
-        </p>
+        <p className="text-base md:text-lg text-muted-foreground mb-8 font-medium tracking-wide">Bmw · Mercedes · Audi · Porsche</p>
 
         {/* Features */}
         <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap mb-10">
@@ -50,10 +42,7 @@ const Hero = () => {
         </div>
 
         {/* CTA */}
-        <a 
-          href="#products"
-          className="inline-block px-10 py-4 gradient-neon rounded-full font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg"
-        >
+        <a href="#products" className="inline-block px-10 py-4 gradient-neon rounded-full font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-lg">
           View Products
         </a>
       </div>
@@ -62,8 +51,6 @@ const Hero = () => {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
         <ChevronDown className="h-6 w-6 text-primary" />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
