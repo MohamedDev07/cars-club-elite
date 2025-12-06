@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.jpg";
-import { ChevronDown, Truck, CreditCard } from "lucide-react";
+import { ChevronDown, Truck, CreditCard, Store } from "lucide-react";
 const Hero = () => {
   return <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16">
       {/* Subtle background pattern */}
@@ -31,6 +31,10 @@ const Hero = () => {
 
         {/* Features */}
         <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap mb-10">
+          <div className="flex items-center gap-2 text-foreground/80">
+            <Store className="h-5 w-5 text-primary" />
+            <span className="text-sm">Online Store</span>
+          </div>
           <div className="flex items-center gap-2 text-foreground/80">
             <Truck className="h-5 w-5 text-primary" />
             <span className="text-sm">Shipping All Egypt</span>
