@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.jpg";
-import { Instagram, Phone } from "lucide-react";
+import { Instagram, Phone, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -37,6 +37,15 @@ const Footer = () => {
             >
               <Instagram className="h-4 w-4" />
               @cars.club.eg
+            </a>
+            <a 
+              href="https://www.facebook.com/carsclubabdelrahmanamr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              <Facebook className="h-4 w-4" />
+              Facebook
             </a>
           </div>
         </div>
