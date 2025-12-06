@@ -23,6 +23,16 @@ import bmw5_G30 from "@/assets/BMW_5-Series_G30_M5_Body_Kit.jpg";
 import bmw6_F12 from "@/assets/BMW_6-Series_F12_M6_Body_Kit.jpg";
 import bmwX6_F16 from "@/assets/BMW_X-Series_X6_F16_X6M_Body_Kit.jpg";
 import bmwX6_G06 from "@/assets/BMW_X-Series_X6_G06_X6M_Body_Kit.jpg";
+import mercedesGLC_X253_FL from "@/assets/Mercedes_Benz_GLC-Class_X253_Face_Lift_GC63_AMG_Body_Kit.jpg";
+import mercedesGLC_X253 from "@/assets/Mercedes_Benz_GLC-Class_X253_GC63_AMG_Body_Kit.jpg";
+import mercedesC_W204 from "@/assets/Mercedes_Benz_C-Class_W204_C63_AMG_Body_Kit.jpg";
+import mercedesC_W205 from "@/assets/Mercedes_Benz_C-Class_W205_C63_AMG_Body_Kit.jpg";
+import mercedesC_W206 from "@/assets/Mercedes_Benz_C-Class_W206_C63_AMG_Body_Kit.jpg";
+import mercedesCla_W117 from "@/assets/Mercedes_Benz_Cla-Class_W117_Cla45_AMG_Body_Kit.jpg";
+import mercedesCla_W118 from "@/assets/Mercedes_Benz_Cla-Class_W118_Cla45_AMG_Body_Kit.jpg";
+import mercedesE_W212 from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_Kit.jpg";
+import mercedesE_W213 from "@/assets/Mercedes_Benz_E-Class_W213_E63_AMG_Body_Kit.jpg";
+import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63_AMG_Body_Kit.jpg";
 
 const products = [
   {
@@ -120,6 +130,46 @@ const products = [
   {
     image: bmwX6_G06,
     title: "BMW X-Series X6 G06 X6M Body Kit"
+  },
+  {
+    image: mercedesGLC_X253_FL,
+    title: "Mercedes Benz GLC-Class X253 Face Lift GC63 AMG Body Kit"
+  },
+  {
+    image: mercedesGLC_X253,
+    title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit"
+  },
+  {
+    image: mercedesC_W204,
+    title: "Mercedes Benz C-Class W204 C63 AMG Body Kit"
+  },
+  {
+    image: mercedesC_W205,
+    title: "Mercedes Benz C-Class W205 C63 AMG Body Kit"
+  },
+  {
+    image: mercedesC_W206,
+    title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
+  },
+  {
+    image: mercedesCla_W117,
+    title: "Mercedes Benz Cla-Class W117 Cla45 AMG Body Kit"
+  },
+  {
+    image: mercedesCla_W118,
+    title: "Mercedes Benz Cla-Class W118 Cla45 AMG Body Kit"
+  },
+  {
+    image: mercedesE_W212,
+    title: "Mercedes Benz E-Class W212 E63 AMG Body Kit"
+  },
+  {
+    image: mercedesE_W213,
+    title: "Mercedes Benz E-Class W213 E63 AMG Body Kit"
+  },
+  {
+    image: mercedesE_W213_FL,
+    title: "Mercedes Benz E-Class W213 Face Lift E63 AMG Body Kit"
   }
 ];
 
