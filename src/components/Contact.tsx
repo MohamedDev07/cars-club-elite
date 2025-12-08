@@ -18,7 +18,7 @@ const Contact = () => {
               <Phone className="h-8 w-8 text-primary" />
             </div>
             <h3 className="font-display font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
-              WhatsApp & Phone
+              WhatsApp
             </h3>
             <p className="text-muted-foreground text-lg font-medium">+20 10 15843591</p>
             
