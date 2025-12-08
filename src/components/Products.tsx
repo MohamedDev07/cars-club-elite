@@ -38,167 +38,122 @@ import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63
 import mercedesG_W264 from "@/assets/Mercedes_Benz_G-Class_W264_G63_Brabus_Body_Kit.jpg";
 import porsche718 from "@/assets/Porsche_718_Gt4_Rs.jpg";
 import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
-
-const products = [
-  {
-    image: product1,
-    title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
-  },
-  {
-    image: product2,
-    title: "BMW 1-Series F20 M1 Body Kit"
-  },
-  {
-    image: product3,
-    title: "BMW X-Series X6 G06 LCI X6M Body Kit"
-  },
-  {
-    image: product4,
-    title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit"
-  },
-  {
-    image: audiA3_8V5,
-    title: "Audi A3 8V.5 Rs Body Kit"
-  },
-  {
-    image: audiA3_8Y,
-    title: "Audi A3 8Y Rs Body Kit"
-  },
-  {
-    image: audiA4_B9,
-    title: "Audi A4 B9 Rs Body Kit"
-  },
-  {
-    image: audiA4_B95,
-    title: "Audi A4 B9.5 Rs Body Kit"
-  },
-  {
-    image: audiA5_B9,
-    title: "Audi A5 B9 Rs Body Kit"
-  },
-  {
-    image: audiA5_B95,
-    title: "Audi A5 B9.5 Rs Body Kit"
-  },
-  {
-    image: bmw2_F22,
-    title: "BMW 2-Series F22 M2 Body Kit"
-  },
-  {
-    image: bmw3_E90,
-    title: "BMW 3-Series E90 M3 Body Kit"
-  },
-  {
-    image: bmw3_F30,
-    title: "BMW 3-Series F30 M3 Body Kit"
-  },
-  {
-    image: bmw3_G20_Lci,
-    title: "BMW 3-Series G20 Lci M3 Body Kit"
-  },
-  {
-    image: mercedesW177,
-    title: "Mercedes Benz A-Class W177 A45 AMG Body Kit"
-  },
-  {
-    image: bmw3_G20,
-    title: "BMW 3-Series G20 M3 Body Kit"
-  },
-  {
-    image: bmw4_G22,
-    title: "BMW 4-Series G22 M4 Body Kit"
-  },
-  {
-    image: bmw5_E60,
-    title: "BMW 5-Series E60 M5 Body Kit"
-  },
-  {
-    image: bmw5_F10,
-    title: "BMW 5-Series F10 M5 Body Kit"
-  },
-  {
-    image: bmw5_G30_Lci,
-    title: "BMW 5-Series G30 Lci M5 Body Kit"
-  },
-  {
-    image: bmw5_G30,
-    title: "BMW 5-Series G30 M5 Body Kit"
-  },
-  {
-    image: bmw6_F12,
-    title: "BMW 6-Series F12 M6 Body Kit"
-  },
-  {
-    image: bmwX6_F16,
-    title: "BMW X-Series X6 F16 X6M Body Kit"
-  },
-  {
-    image: bmwX6_G06,
-    title: "BMW X-Series X6 G06 X6M Body Kit"
-  },
-  {
-    image: mercedesGLC_X253_FL,
-    title: "Mercedes Benz GLC-Class X253 Face Lift GC63 AMG Body Kit"
-  },
-  {
-    image: mercedesGLC_X253,
-    title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit"
-  },
-  {
-    image: mercedesC_W204,
-    title: "Mercedes Benz C-Class W204 C63 AMG Body Kit"
-  },
-  {
-    image: mercedesC_W205,
-    title: "Mercedes Benz C-Class W205 C63 AMG Body Kit"
-  },
-  {
-    image: mercedesC_W206,
-    title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
-  },
-  {
-    image: mercedesCla_W117,
-    title: "Mercedes Benz Cla-Class W117 Cla45 AMG Body Kit"
-  },
-  {
-    image: mercedesCla_W118,
-    title: "Mercedes Benz Cla-Class W118 Cla45 AMG Body Kit"
-  },
-  {
-    image: mercedesE_W212,
-    title: "Mercedes Benz E-Class W212 E63 AMG Body Kit"
-  },
-  {
-    image: mercedesE_W213,
-    title: "Mercedes Benz E-Class W213 E63 AMG Body Kit"
-  },
-  {
-    image: mercedesE_W213_FL,
-    title: "Mercedes Benz E-Class W213 Face Lift E63 AMG Body Kit"
-  },
-  {
-    image: mercedesG_W264,
-    title: "Mercedes Benz G-Class W463 G63 Brabus Body Kit"
-  },
-  {
-    image: porsche718,
-    title: "Porsche 718 Gt4 Rs Body Kit"
-  },
-  {
-    image: porsche981,
-    title: "Porsche 981 Gt4 Rs Body Kit"
-  }
-];
-
+const products = [{
+  image: product1,
+  title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
+}, {
+  image: product2,
+  title: "BMW 1-Series F20 M1 Body Kit"
+}, {
+  image: product3,
+  title: "BMW X-Series X6 G06 LCI X6M Body Kit"
+}, {
+  image: product4,
+  title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit"
+}, {
+  image: audiA3_8V5,
+  title: "Audi A3 8V.5 Rs Body Kit"
+}, {
+  image: audiA3_8Y,
+  title: "Audi A3 8Y Rs Body Kit"
+}, {
+  image: audiA4_B9,
+  title: "Audi A4 B9 Rs Body Kit"
+}, {
+  image: audiA4_B95,
+  title: "Audi A4 B9.5 Rs Body Kit"
+}, {
+  image: audiA5_B9,
+  title: "Audi A5 B9 Rs Body Kit"
+}, {
+  image: audiA5_B95,
+  title: "Audi A5 B9.5 Rs Body Kit"
+}, {
+  image: bmw2_F22,
+  title: "BMW 2-Series F22 M2 Body Kit"
+}, {
+  image: bmw3_E90,
+  title: "BMW 3-Series E90 M3 Body Kit"
+}, {
+  image: bmw3_F30,
+  title: "BMW 3-Series F30 M3 Body Kit"
+}, {
+  image: bmw3_G20_Lci,
+  title: "BMW 3-Series G20 Lci M3 Body Kit"
+}, {
+  image: mercedesW177,
+  title: "Mercedes Benz A-Class W177 A45 AMG Body Kit"
+}, {
+  image: bmw3_G20,
+  title: "BMW 3-Series G20 M3 Body Kit"
+}, {
+  image: bmw4_G22,
+  title: "BMW 4-Series G22 M4 Body Kit"
+}, {
+  image: bmw5_E60,
+  title: "BMW 5-Series E60 M5 Body Kit"
+}, {
+  image: bmw5_F10,
+  title: "BMW 5-Series F10 M5 Body Kit"
+}, {
+  image: bmw5_G30_Lci,
+  title: "BMW 5-Series G30 Lci M5 Body Kit"
+}, {
+  image: bmw5_G30,
+  title: "BMW 5-Series G30 M5 Body Kit"
+}, {
+  image: bmw6_F12,
+  title: "BMW 6-Series F12 M6 Body Kit"
+}, {
+  image: bmwX6_F16,
+  title: "BMW X-Series X6 F16 X6M Body Kit"
+}, {
+  image: bmwX6_G06,
+  title: "BMW X-Series X6 G06 X6M Body Kit"
+}, {
+  image: mercedesGLC_X253_FL,
+  title: "Mercedes Benz GLC-Class X253 Face Lift GC63 AMG Body Kit"
+}, {
+  image: mercedesGLC_X253,
+  title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit"
+}, {
+  image: mercedesC_W204,
+  title: "Mercedes Benz C-Class W204 C63 AMG Body Kit"
+}, {
+  image: mercedesC_W205,
+  title: "Mercedes Benz C-Class W205 C63 AMG Body Kit"
+}, {
+  image: mercedesC_W206,
+  title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
+}, {
+  image: mercedesCla_W117,
+  title: "Mercedes Benz Cla-Class W117 Cla45 AMG Body Kit"
+}, {
+  image: mercedesCla_W118,
+  title: "Mercedes Benz Cla-Class W118 Cla45 AMG Body Kit"
+}, {
+  image: mercedesE_W212,
+  title: "Mercedes Benz E-Class W212 E63 AMG Body Kit"
+}, {
+  image: mercedesE_W213,
+  title: "Mercedes Benz E-Class W213 E63 AMG Body Kit"
+}, {
+  image: mercedesE_W213_FL,
+  title: "Mercedes Benz E-Class W213 Face Lift E63 AMG Body Kit"
+}, {
+  image: mercedesG_W264,
+  title: "Mercedes Benz G-Class W463 G63 Brabus Body Kit"
+}, {
+  image: porsche718,
+  title: "Porsche 718 Gt4 Rs Body Kit"
+}, {
+  image: porsche981,
+  title: "Porsche 981 Gt4 Rs Body Kit"
+}];
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  return (
-    <section id="products" className="py-20 bg-background">
+  const filteredProducts = products.filter(product => product.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  return <section id="products" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -212,26 +167,17 @@ const Products = () => {
         <div className="flex justify-center mb-8">
           <div className="relative w-full max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
-            <input
-              type="text"
-              placeholder="Search BMW, Mercedes, Audi, Porsche, F20..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              style={{ boxShadow: "0 0 15px hsl(var(--primary) / 0.5)" }}
-            />
+            <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" style={{
+            boxShadow: "0 0 15px hsl(var(--primary) / 0.5)"
+          }} placeholder="Search BMW, Mercedes, Audi, Porsche..." />
           </div>
         </div>
 
         {/* Products grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {filteredProducts.map((product, index) => (
-            <ProductCard key={index} image={product.image} title={product.title} />
-          ))}
+          {filteredProducts.map((product, index) => <ProductCard key={index} image={product.image} title={product.title} />)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Products;
