@@ -150,10 +150,29 @@ const products = [{
   image: porsche981,
   title: "Porsche 981 Gt4 Rs Body Kit"
 }];
+const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
+
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const filteredProducts = products.filter(product => product.title.toLowerCase().includes(searchTerm.toLowerCase()));
-  return <section id="products" className="py-20 bg-background">
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+
+  const toggleBrand = (brand: string) => {
+    setSelectedBrands(prev => 
+      prev.includes(brand) 
+        ? prev.filter(b => b !== brand)
+        : [...prev, brand]
+    );
+  };
+
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesBrand = selectedBrands.length === 0 || 
+      selectedBrands.some(brand => product.title.toLowerCase().includes(brand.toLowerCase()));
+    return matchesSearch && matchesBrand;
+  });
+
+  return (
+    <section id="products" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -163,21 +182,47 @@ const Products = () => {
           <p className="text-muted-foreground max-w-md mx-auto">Sports Body Kits</p>
         </div>
 
-        {/* Search bar */}
-        <div className="flex justify-center mb-8">
+        {/* Search bar and brand filters */}
+        <div className="flex flex-col items-center gap-4 mb-8">
           <div className="relative w-full max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
-            <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" style={{
-            boxShadow: "0 0 15px hsl(var(--primary) / 0.5)"
-          }} placeholder="Search BMW, Mercedes, Audi, Porsche..." />
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              style={{ boxShadow: "0 0 15px hsl(var(--primary) / 0.5)" }}
+              placeholder="Search BMW, Mercedes, Audi, Porsche..."
+            />
+          </div>
+          
+          {/* Brand filter buttons */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {brands.map(brand => (
+              <button
+                key={brand}
+                onClick={() => toggleBrand(brand)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 ${
+                  selectedBrands.includes(brand)
+                    ? "bg-primary text-primary-foreground border-primary shadow-[0_0_15px_hsl(var(--primary)/0.6)]"
+                    : "bg-card text-foreground border-border hover:border-primary hover:shadow-[0_0_10px_hsl(var(--primary)/0.3)]"
+                }`}
+              >
+                {brand}
+              </button>
+            ))}
           </div>
         </div>
 
         {/* Products grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {filteredProducts.map((product, index) => <ProductCard key={index} image={product.image} title={product.title} />)}
+          {filteredProducts.map((product, index) => (
+            <ProductCard key={index} image={product.image} title={product.title} />
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Products;
