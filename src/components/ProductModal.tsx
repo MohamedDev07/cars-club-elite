@@ -56,8 +56,8 @@ const ProductModal = ({
             </div>
           </div>
 
-          <a href="https://wa.me/201015843591" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-4 gradient-neon rounded-xl font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity">Order Now
-            Order Now - 01015843591
+          <a href="https://wa.me/201015843591" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-4 gradient-neon rounded-xl font-display font-semibold text-primary-foreground hover:opacity-90 transition-opacity">
+            Order Now
           </a>
         </div>
       </div>
