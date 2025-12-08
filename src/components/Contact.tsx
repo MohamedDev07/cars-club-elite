@@ -1,8 +1,6 @@
 import { Phone, Instagram, Facebook, MapPin } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 gradient-dark">
+  return <section id="contact" className="py-20 gradient-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
@@ -23,9 +21,7 @@ const Contact = () => {
               WhatsApp & Phone
             </h3>
             <p className="text-muted-foreground text-lg font-medium">+20 10 15843591</p>
-            <span className="mt-4 px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">
-              Chat Now
-            </span>
+            
           </a>
 
           {/* Instagram */}
@@ -53,12 +49,7 @@ const Contact = () => {
 
         {/* Location Badge */}
         <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-3 px-6 py-3 gradient-card rounded-full border border-border">
-            <MapPin className="h-5 w-5 text-primary" />
-            <span className="text-muted-foreground font-medium">Shipping All Over Egypt</span>
-            <span className="text-muted-foreground">•</span>
-            <span className="text-muted-foreground font-medium">Cash On Delivery</span>
-          </div>
+          
         </div>
 
         {/* Cairo Egypt Badge */}
@@ -69,8 +60,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
