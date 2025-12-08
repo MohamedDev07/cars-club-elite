@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Search } from "lucide-react";
 import ProductCard from "./ProductCard";
 import product1 from "@/assets/product1.jpg";
 import product2 from "@/assets/product2.jpg";
@@ -176,7 +178,7 @@ const products = [
   },
   {
     image: mercedesG_W264,
-    title: "Mercedes Benz G-Class W264 G63 Brabus Body Kit"
+    title: "Mercedes Benz G-Class W463 G63 Brabus Body Kit"
   },
   {
     image: porsche718,
@@ -189,6 +191,12 @@ const products = [
 ];
 
 const Products = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <section id="products" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -200,9 +208,24 @@ const Products = () => {
           <p className="text-muted-foreground max-w-md mx-auto">Sports Body Kits</p>
         </div>
 
+        {/* Search bar */}
+        <div className="flex justify-center mb-8">
+          <div className="relative w-full max-w-md">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
+            <input
+              type="text"
+              placeholder="Search BMW, Mercedes, Audi, Porsche, F20..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              style={{ boxShadow: "0 0 15px hsl(var(--primary) / 0.5)" }}
+            />
+          </div>
+        </div>
+
         {/* Products grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard key={index} image={product.image} title={product.title} />
           ))}
         </div>

@@ -12,8 +12,8 @@ const ProductCard = ({
   return <>
       <div className="group gradient-card rounded-xl overflow-hidden border border-border card-hover">
         {/* Image - clickable */}
-        <div className="relative overflow-hidden aspect-square cursor-pointer" onClick={() => setIsModalOpen(true)}>
-          <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="relative overflow-hidden cursor-pointer" onClick={() => setIsModalOpen(true)}>
+          <img src={image} alt={title} className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
             <span className="text-primary text-sm font-medium">View Details</span>
           </div>
