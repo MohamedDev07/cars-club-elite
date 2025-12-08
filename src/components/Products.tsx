@@ -39,6 +39,12 @@ import mercedesG_W264 from "@/assets/Mercedes_Benz_G-Class_W264_G63_Brabus_Body_
 import porsche718 from "@/assets/Porsche_718_Gt4_Rs.jpg";
 import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
 const products = [{
+  image: mercedesC_W206,
+  title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
+}, {
+  image: bmw4_G22,
+  title: "BMW 4-Series G22 M4 Body Kit"
+}, {
   image: product1,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
 }, {
@@ -87,9 +93,6 @@ const products = [{
   image: bmw3_G20,
   title: "BMW 3-Series G20 M3 Body Kit"
 }, {
-  image: bmw4_G22,
-  title: "BMW 4-Series G22 M4 Body Kit"
-}, {
   image: bmw5_E60,
   title: "BMW 5-Series E60 M5 Body Kit"
 }, {
@@ -122,9 +125,6 @@ const products = [{
 }, {
   image: mercedesC_W205,
   title: "Mercedes Benz C-Class W205 C63 AMG Body Kit"
-}, {
-  image: mercedesC_W206,
-  title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
 }, {
   image: mercedesCla_W117,
   title: "Mercedes Benz Cla-Class W117 Cla45 AMG Body Kit"
