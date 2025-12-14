@@ -52,7 +52,7 @@ const Footer = () => {
 
         <div className="mt-6 pt-6 border-t border-border text-center">
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} Cars Club · BMW · Mercedes · Audi · Porsche
+            © {new Date().getFullYear()} Cars Club
           </p>
         </div>
       </div>
