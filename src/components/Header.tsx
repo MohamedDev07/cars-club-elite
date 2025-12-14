@@ -27,7 +27,7 @@ const Header = () => {
 
         <div className="flex items-center gap-3">
           <a href="https://wa.me/201015843591" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
-            <Phone className="h-4 w-4" />
+            
             <span>WhatsApp</span>
           </a>
 
