@@ -20,9 +20,12 @@ const ProductModal = ({
   const [touchStart, setTouchStart] = useState<{ distance: number } | null>(null);
   const [startPos, setStartPos] = useState<{ x: number; y: number } | null>(null);
   const [totalDistance, setTotalDistance] = useState(0);
+  const [isInZoomArea, setIsInZoomArea] = useState(false);
+  const zoomTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  const MIN_DISTANCE = 20; // Minimum pixels to move before zoom activates
+  const MIN_DISTANCE = 15; // Minimum pixels to move before zoom activates
+  const EDGE_ZONE = 18; // Percentage of edge to ignore zoom
 
   useEffect(() => {
     if (isOpen) {
@@ -33,9 +36,16 @@ const ProductModal = ({
       setScale(1);
       setStartPos(null);
       setTotalDistance(0);
+      setIsInZoomArea(false);
+      if (zoomTimeoutRef.current) {
+        clearTimeout(zoomTimeoutRef.current);
+      }
     }
     return () => {
       document.body.style.overflow = 'unset';
+      if (zoomTimeoutRef.current) {
+        clearTimeout(zoomTimeoutRef.current);
+      }
     };
   }, [isOpen]);
 
@@ -46,16 +56,21 @@ const ProductModal = ({
     const rawX = ((e.clientX - rect.left) / rect.width) * 100;
     const rawY = ((e.clientY - rect.top) / rect.height) * 100;
     
-    // Limit zoom in edge areas (15% from each side zooms less)
-    const edgeZone = 15;
-    let x = rawX;
-    if (rawX < edgeZone) {
-      x = edgeZone + (rawX - edgeZone) * 0.5;
-    } else if (rawX > 100 - edgeZone) {
-      x = (100 - edgeZone) + (rawX - (100 - edgeZone)) * 0.5;
+    // Check if mouse is in the edge zones (no zoom there)
+    const inEdgeZone = rawX < EDGE_ZONE || rawX > (100 - EDGE_ZONE);
+    
+    if (inEdgeZone) {
+      setIsInZoomArea(false);
+      setIsZooming(false);
+      if (zoomTimeoutRef.current) {
+        clearTimeout(zoomTimeoutRef.current);
+        zoomTimeoutRef.current = null;
+      }
+      return;
     }
     
-    setZoomPosition({ x, y: rawY });
+    setIsInZoomArea(true);
+    setZoomPosition({ x: rawX, y: rawY });
     
     // Track distance moved
     if (!startPos) {
@@ -69,8 +84,11 @@ const ProductModal = ({
         setTotalDistance(distance);
       }
       
-      if (totalDistance >= MIN_DISTANCE && !isZooming) {
-        setIsZooming(true);
+      if (totalDistance >= MIN_DISTANCE && !isZooming && !zoomTimeoutRef.current) {
+        zoomTimeoutRef.current = setTimeout(() => {
+          setIsZooming(true);
+          zoomTimeoutRef.current = null;
+        }, 80);
       }
     }
   };
@@ -82,8 +100,13 @@ const ProductModal = ({
 
   const handleMouseLeave = () => {
     setIsZooming(false);
+    setIsInZoomArea(false);
     setStartPos(null);
     setTotalDistance(0);
+    if (zoomTimeoutRef.current) {
+      clearTimeout(zoomTimeoutRef.current);
+      zoomTimeoutRef.current = null;
+    }
   };
 
   // Touch handlers for pinch zoom
@@ -149,11 +172,11 @@ const ProductModal = ({
           <img 
             src={image} 
             alt={title} 
-            className="w-full h-auto object-contain max-h-[60vh] transition-transform duration-200 select-none"
+            className="w-full h-auto object-contain max-h-[60vh] select-none transition-transform duration-500 ease-out"
             draggable={false}
             style={{
-              transform: isZooming ? `scale(2)` : `scale(${scale})`,
-              transformOrigin: isZooming ? `${zoomPosition.x}% ${zoomPosition.y}%` : 'center'
+              transform: isZooming && isInZoomArea ? `scale(2)` : `scale(${scale})`,
+              transformOrigin: isZooming && isInZoomArea ? `${zoomPosition.x}% ${zoomPosition.y}%` : 'center'
             }}
           />
           
