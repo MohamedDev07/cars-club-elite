@@ -22,7 +22,7 @@ const ProductModal = ({
   const [totalDistance, setTotalDistance] = useState(0);
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  const MIN_DISTANCE = 30; // Minimum pixels to move before zoom activates
+  const MIN_DISTANCE = 20; // Minimum pixels to move before zoom activates
 
   useEffect(() => {
     if (isOpen) {
