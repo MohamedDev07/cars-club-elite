@@ -169,6 +169,13 @@ const ProductModal = ({
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
+          {/* CARS CLUB Watermark */}
+          <div className="absolute top-0 left-0 right-0 flex justify-center z-10 pointer-events-none">
+            <div className="bg-[#e8e8e8] px-6 py-1.5 text-black text-sm font-bold tracking-[0.15em]">
+              CARS CLUB
+            </div>
+          </div>
+          
           <img 
             src={image} 
             alt={title} 
