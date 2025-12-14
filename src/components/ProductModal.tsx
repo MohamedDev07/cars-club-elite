@@ -169,23 +169,27 @@ const ProductModal = ({
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* CARS CLUB Watermark */}
-          <div className="absolute top-0 left-0 right-0 flex justify-center z-10 pointer-events-none">
-            <div className="bg-[#e8e8e8] px-6 py-1.5 text-black text-sm font-bold tracking-[0.15em]">
-              CARS CLUB
-            </div>
-          </div>
-          
-          <img 
-            src={image} 
-            alt={title} 
-            className="w-full h-auto object-contain max-h-[60vh] select-none transition-transform duration-500 ease-out"
-            draggable={false}
+          <div 
+            className="relative w-full transition-transform duration-500 ease-out"
             style={{
               transform: isZooming && isInZoomArea ? `scale(2)` : `scale(${scale})`,
               transformOrigin: isZooming && isInZoomArea ? `${zoomPosition.x}% ${zoomPosition.y}%` : 'center'
             }}
-          />
+          >
+            {/* CARS CLUB Watermark - integrated with image */}
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+              <span className="text-black text-sm font-bold tracking-[0.15em]">
+                CARS CLUB
+              </span>
+            </div>
+            
+            <img 
+              src={image} 
+              alt={title} 
+              className="w-full h-auto object-contain max-h-[60vh] select-none"
+              draggable={false}
+            />
+          </div>
           
           {/* Zoom hint - Desktop */}
           {!isZooming && scale === 1 && (
