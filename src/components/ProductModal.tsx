@@ -16,24 +16,26 @@ const ProductModal = ({
 }: ProductModalProps) => {
   const [isZooming, setIsZooming] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
-  const [hasMoved, setHasMoved] = useState(false);
   const [scale, setScale] = useState(1);
   const [touchStart, setTouchStart] = useState<{ distance: number } | null>(null);
+  const [startPos, setStartPos] = useState<{ x: number; y: number } | null>(null);
+  const [totalDistance, setTotalDistance] = useState(0);
   const imageContainerRef = useRef<HTMLDivElement>(null);
-  const zoomTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const MIN_DISTANCE = 30; // Minimum pixels to move before zoom activates
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
-      setHasMoved(false);
       setIsZooming(false);
       setScale(1);
+      setStartPos(null);
+      setTotalDistance(0);
     }
     return () => {
       document.body.style.overflow = 'unset';
-      if (zoomTimeoutRef.current) clearTimeout(zoomTimeoutRef.current);
     };
   }, [isOpen]);
 
@@ -41,27 +43,47 @@ const ProductModal = ({
     if (!imageContainerRef.current) return;
     
     const rect = imageContainerRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    const rawX = ((e.clientX - rect.left) / rect.width) * 100;
+    const rawY = ((e.clientY - rect.top) / rect.height) * 100;
     
-    setZoomPosition({ x, y });
+    // Limit zoom in edge areas (15% from each side zooms less)
+    const edgeZone = 15;
+    let x = rawX;
+    if (rawX < edgeZone) {
+      x = edgeZone + (rawX - edgeZone) * 0.5;
+    } else if (rawX > 100 - edgeZone) {
+      x = (100 - edgeZone) + (rawX - (100 - edgeZone)) * 0.5;
+    }
     
-    if (!hasMoved) {
-      setHasMoved(true);
-      zoomTimeoutRef.current = setTimeout(() => {
+    setZoomPosition({ x, y: rawY });
+    
+    // Track distance moved
+    if (!startPos) {
+      setStartPos({ x: e.clientX, y: e.clientY });
+    } else {
+      const dx = e.clientX - startPos.x;
+      const dy = e.clientY - startPos.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      if (distance > totalDistance) {
+        setTotalDistance(distance);
+      }
+      
+      if (totalDistance >= MIN_DISTANCE && !isZooming) {
         setIsZooming(true);
-      }, 150);
+      }
     }
   };
 
   const handleMouseEnter = () => {
-    setHasMoved(false);
+    setStartPos(null);
+    setTotalDistance(0);
   };
 
   const handleMouseLeave = () => {
     setIsZooming(false);
-    setHasMoved(false);
-    if (zoomTimeoutRef.current) clearTimeout(zoomTimeoutRef.current);
+    setStartPos(null);
+    setTotalDistance(0);
   };
 
   // Touch handlers for pinch zoom
