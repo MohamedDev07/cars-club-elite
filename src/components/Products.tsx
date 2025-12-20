@@ -51,6 +51,8 @@ import e63HoodFendersW212 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_
 import e63HoodFendersW213 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213.jpg";
 import e63HoodFendersW213FL from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213_Facelift.jpg";
 import gtrHoodM5FendersE60 from "@/assets/Gtr_Hood_M5_Fenders_For_Bmw_E60.jpg";
+import m3HoodM3FendersE90 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E90.jpg";
+import gtsHoodM3FendersF30 from "@/assets/Gts_Hood_M3_Fenders_For_Bmw_F30.jpg";
 
 const bodyKitProducts = [{
   image: mercedesC_W206,
@@ -166,6 +168,12 @@ const bodyKitProducts = [{
 }];
 
 const hoodFenderProducts = [{
+  image: m3HoodM3FendersE90,
+  title: "M3 Hood M3 Fenders For Bmw E90"
+}, {
+  image: gtsHoodM3FendersF30,
+  title: "Gts Hood M3 Fenders For Bmw F30"
+}, {
   image: gtrHoodM5FendersE60,
   title: "Gtr Hood M5 Fenders For Bmw E60"
 }, {
