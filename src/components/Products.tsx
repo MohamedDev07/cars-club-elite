@@ -53,6 +53,12 @@ import e63HoodFendersW213FL from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Ben
 import gtrHoodM5FendersE60 from "@/assets/Gtr_Hood_M5_Fenders_For_Bmw_E60.jpg";
 import m3HoodM3FendersE90 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E90.jpg";
 import gtsHoodM3FendersF30 from "@/assets/Gts_Hood_M3_Fenders_For_Bmw_F30.jpg";
+
+// Wheels Rims imports
+import bmwWheels from "@/assets/BMW_Wheels.jpg";
+import bmwWheels2 from "@/assets/BMW_Wheels_2.jpg";
+import mercedesWheels from "@/assets/Mercedes_Benz_Wheels.jpg";
+
 const bodyKitProducts = [{
   image: mercedesC_W206,
   title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
@@ -202,8 +208,20 @@ const hoodFenderProducts = [{
   image: e63HoodFendersW213FL,
   title: "E63 Hood E63 Fenders For Mercedes Benz W213 Facelift"
 }];
+
+const wheelsRimsProducts = [{
+  image: bmwWheels,
+  title: "BMW Wheels"
+}, {
+  image: bmwWheels2,
+  title: "BMW Wheels 2"
+}, {
+  image: mercedesWheels,
+  title: "Mercedes Benz Wheels"
+}];
+
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
-const categories = ["Sports Body Kit", "Sports Hood & Fender"] as const;
+const categories = ["Sports Body Kit", "Sports Hood & Fender", "Wheels Rims"] as const;
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
@@ -211,7 +229,11 @@ const Products = () => {
   const toggleBrand = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
   };
-  const currentProducts = selectedCategory === "Sports Body Kit" ? bodyKitProducts : hoodFenderProducts;
+  const currentProducts = selectedCategory === "Sports Body Kit" 
+    ? bodyKitProducts 
+    : selectedCategory === "Sports Hood & Fender" 
+      ? hoodFenderProducts 
+      : wheelsRimsProducts;
   const filteredProducts = currentProducts.filter(product => {
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesBrand = selectedBrands.length === 0 || selectedBrands.some(brand => product.title.toLowerCase().includes(brand.toLowerCase()));
