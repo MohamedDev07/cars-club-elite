@@ -221,7 +221,7 @@ const wheelsRimsProducts = [{
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
-const categories = ["Sports Body Kit", "Sports Hood & Fender", "Wheels Rims"] as const;
+const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims"] as const;
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
@@ -231,7 +231,7 @@ const Products = () => {
   };
   const currentProducts = selectedCategory === "Sports Body Kit" 
     ? bodyKitProducts 
-    : selectedCategory === "Sports Hood & Fender" 
+    : selectedCategory === "Sports Hood & Sports Fender" 
       ? hoodFenderProducts 
       : wheelsRimsProducts;
   const filteredProducts = currentProducts.filter(product => {
