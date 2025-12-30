@@ -178,6 +178,12 @@ const hoodFenderProducts = [{
   image: gtsHoodM3FendersF30,
   title: "Gts Hood M3 Fenders For Bmw F30"
 }, {
+  image: c63HoodFendersW205,
+  title: "C63 Hood C63 Fenders For Mercedes Benz W205"
+}, {
+  image: c63HoodFendersW206,
+  title: "C63 Hood C63 Fenders For Mercedes Benz W206"
+}, {
   image: gtrHoodM5FendersE60,
   title: "Gtr Hood M5 Fenders For Bmw E60"
 }, {
@@ -192,12 +198,6 @@ const hoodFenderProducts = [{
 }, {
   image: c63HoodFendersW204,
   title: "C63 Hood C63 Fenders For Mercedes Benz W204"
-}, {
-  image: c63HoodFendersW205,
-  title: "C63 Hood C63 Fenders For Mercedes Benz W205"
-}, {
-  image: c63HoodFendersW206,
-  title: "C63 Hood C63 Fenders For Mercedes Benz W206"
 }, {
   image: e63HoodFendersW212,
   title: "E63 Hood E63 Fenders For Mercedes Benz W212"
