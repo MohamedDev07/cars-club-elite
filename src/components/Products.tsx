@@ -243,8 +243,8 @@ const Products = () => {
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Products
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
+            <span className="neon-text">Products</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">{selectedCategory}</p>
         </div>
