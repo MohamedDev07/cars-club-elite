@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
         <div className="mb-6">
-          <img src={logo} alt="Cars Club Logo" className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl neon-border object-contain" />
+          <img src={logo} alt="Cars Club Logo" className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl object-contain" />
         </div>
 
         {/* Brand name */}
