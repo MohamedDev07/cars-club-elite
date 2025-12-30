@@ -213,11 +213,11 @@ const wheelsRimsProducts = [{
   image: bmwWheels,
   title: "BMW Wheels"
 }, {
-  image: bmwWheels2,
-  title: "BMW Wheels 2"
-}, {
   image: mercedesWheels,
   title: "Mercedes Benz Wheels"
+}, {
+  image: bmwWheels2,
+  title: "BMW Wheels 2"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
