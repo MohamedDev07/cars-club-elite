@@ -262,22 +262,22 @@ const wheelsRimsProducts = [{
   title: "Bmw M Wheels 12"
 }, {
   image: mercedesWheels1,
-  title: "Mercedes AMG Wheels 1"
+  title: "Mercedes Benz AMG Wheels 1"
 }, {
   image: mercedesWheels2,
-  title: "Mercedes AMG Wheels 2"
+  title: "Mercedes Benz AMG Wheels 2"
 }, {
   image: mercedesWheels3,
-  title: "Mercedes AMG Wheels 3"
+  title: "Mercedes Benz AMG Wheels 3"
 }, {
   image: mercedesWheels4,
-  title: "Mercedes AMG Wheels 4"
+  title: "Mercedes Benz AMG Wheels 4"
 }, {
   image: mercedesWheels5,
-  title: "Mercedes AMG Wheels 5"
+  title: "Mercedes Benz AMG Wheels 5"
 }, {
   image: mercedesWheels6,
-  title: "Mercedes AMG Wheels 6"
+  title: "Mercedes Benz AMG Wheels 6"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
