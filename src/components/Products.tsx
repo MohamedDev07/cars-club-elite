@@ -67,6 +67,12 @@ import bmwWheels9 from "@/assets/Bmw_Wheels_9.png";
 import bmwWheels10 from "@/assets/Bmw_Wheels_10.png";
 import bmwWheels11 from "@/assets/Bmw_Wheels_11.png";
 import bmwWheels12 from "@/assets/Bmw_Wheels_12.png";
+import mercedesWheels1 from "@/assets/Mercedes_Wheels_1.png";
+import mercedesWheels2 from "@/assets/Mercedes_Wheels_2.jpg";
+import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
+import mercedesWheels4 from "@/assets/Mercedes_Wheels_4.jpg";
+import mercedesWheels5 from "@/assets/Mercedes_Wheels_5.jpg";
+import mercedesWheels6 from "@/assets/Mercedes_Wheels_6.jpg";
 
 const bodyKitProducts = [{
   image: mercedesC_W206,
@@ -220,40 +226,58 @@ const hoodFenderProducts = [{
 
 const wheelsRimsProducts = [{
   image: bmwWheels1,
-  title: "Bmw Wheels 1"
+  title: "Bmw M Wheels 1"
 }, {
   image: bmwWheels2,
-  title: "Bmw Wheels 2"
+  title: "Bmw M Wheels 2"
 }, {
   image: bmwWheels3,
-  title: "Bmw Wheels 3"
+  title: "Bmw M Wheels 3"
 }, {
   image: bmwWheels4,
-  title: "Bmw Wheels 4"
+  title: "Bmw M Wheels 4"
 }, {
   image: bmwWheels5,
-  title: "Bmw Wheels 5"
+  title: "Bmw M Wheels 5"
 }, {
   image: bmwWheels6,
-  title: "Bmw Wheels 6"
+  title: "Bmw M Wheels 6"
 }, {
   image: bmwWheels7,
-  title: "Bmw Wheels 7"
+  title: "Bmw M Wheels 7"
 }, {
   image: bmwWheels8,
-  title: "Bmw Wheels 8"
+  title: "Bmw M Wheels 8"
 }, {
   image: bmwWheels9,
-  title: "Bmw Wheels 9"
+  title: "Bmw M Wheels 9"
 }, {
   image: bmwWheels10,
-  title: "Bmw Wheels 10"
+  title: "Bmw M Wheels 10"
 }, {
   image: bmwWheels11,
-  title: "Bmw Wheels 11"
+  title: "Bmw M Wheels 11"
 }, {
   image: bmwWheels12,
-  title: "Bmw Wheels 12"
+  title: "Bmw M Wheels 12"
+}, {
+  image: mercedesWheels1,
+  title: "Mercedes AMG Wheels 1"
+}, {
+  image: mercedesWheels2,
+  title: "Mercedes AMG Wheels 2"
+}, {
+  image: mercedesWheels3,
+  title: "Mercedes AMG Wheels 3"
+}, {
+  image: mercedesWheels4,
+  title: "Mercedes AMG Wheels 4"
+}, {
+  image: mercedesWheels5,
+  title: "Mercedes AMG Wheels 5"
+}, {
+  image: mercedesWheels6,
+  title: "Mercedes AMG Wheels 6"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
