@@ -55,9 +55,16 @@ import m3HoodM3FendersE90 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E90.jpg";
 import gtsHoodM3FendersF30 from "@/assets/Gts_Hood_M3_Fenders_For_Bmw_F30.jpg";
 
 // Wheels Rims imports
-import bmwWheels from "@/assets/BMW_Wheels.jpg";
-import bmwWheels2 from "@/assets/BMW_Wheels_2.jpg";
-import mercedesWheels from "@/assets/Mercedes_Benz_Wheels.jpg";
+import bmwWheels1 from "@/assets/Bmw_Wheels_1.jpg";
+import bmwWheels2 from "@/assets/Bmw_Wheels_2.jpg";
+import bmwWheels3 from "@/assets/Bmw_Wheels_3.jpg";
+import bmwWheels4 from "@/assets/Bmw_Wheels_4.jpg";
+import bmwWheels5 from "@/assets/Bmw_Wheels_5.jpg";
+import bmwWheels6 from "@/assets/Bmw_Wheels_6.jpg";
+import bmwWheels7 from "@/assets/Bmw_Wheels_7.jpg";
+import bmwWheels8 from "@/assets/Bmw_Wheels_8.jpg";
+import bmwWheels9 from "@/assets/Bmw_Wheels_9.png";
+import bmwWheels10 from "@/assets/Bmw_Wheels_10.png";
 
 const bodyKitProducts = [{
   image: mercedesC_W206,
@@ -210,14 +217,35 @@ const hoodFenderProducts = [{
 }];
 
 const wheelsRimsProducts = [{
-  image: bmwWheels,
-  title: "BMW Wheels"
-}, {
-  image: mercedesWheels,
-  title: "Mercedes Benz Wheels"
+  image: bmwWheels1,
+  title: "Bmw Wheels 1"
 }, {
   image: bmwWheels2,
-  title: "BMW Wheels 2"
+  title: "Bmw Wheels 2"
+}, {
+  image: bmwWheels3,
+  title: "Bmw Wheels 3"
+}, {
+  image: bmwWheels4,
+  title: "Bmw Wheels 4"
+}, {
+  image: bmwWheels5,
+  title: "Bmw Wheels 5"
+}, {
+  image: bmwWheels6,
+  title: "Bmw Wheels 6"
+}, {
+  image: bmwWheels7,
+  title: "Bmw Wheels 7"
+}, {
+  image: bmwWheels8,
+  title: "Bmw Wheels 8"
+}, {
+  image: bmwWheels9,
+  title: "Bmw Wheels 9"
+}, {
+  image: bmwWheels10,
+  title: "Bmw Wheels 10"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
