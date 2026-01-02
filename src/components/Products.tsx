@@ -277,7 +277,7 @@ const wheelsRimsProducts = [{
   title: "Mercedes Benz AMG Wheels 5"
 }, {
   image: mercedesWheels6,
-  title: "Mercedes Benz AMG Wheels 6"
+  title: "Mercedes Benz Brabus Wheels 6"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
