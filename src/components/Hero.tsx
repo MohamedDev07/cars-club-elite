@@ -17,41 +17,41 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
-        <div className="mb-6">
+        <div className="mb-8">
           <img 
             src={logo} 
             alt="Cars Club Logo" 
-            className="h-36 w-36 md:h-44 md:w-44 mx-auto rounded-2xl object-contain" 
+            className="h-36 w-36 md:h-48 md:w-48 mx-auto rounded-2xl object-contain shadow-lg shadow-primary/20" 
           />
         </div>
 
         {/* Brand name */}
-        <h1 className="font-display text-4xl md:text-6xl font-bold mb-3 tracking-wider">
+        <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wider">
           <span className="neon-text">CARS CLUB</span>
         </h1>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl font-display text-primary/90 mb-6">
+        <p className="text-xl md:text-2xl font-display text-primary mb-8">
           Car Tuning Parts
         </p>
 
         {/* Brands */}
-        <p className="text-base md:text-lg text-muted-foreground mb-8 font-medium tracking-wide">
+        <p className="text-base md:text-lg text-muted-foreground mb-10 font-medium tracking-widest uppercase">
           BMW · Mercedes · Audi · Porsche
         </p>
 
         {/* Features */}
-        <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap mb-10">
-          <div className="flex items-center gap-2 text-foreground/80">
-            <Store className="h-5 w-5 text-primary" />
+        <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap mb-12">
+          <div className="flex items-center gap-2 text-foreground/70">
+            <Store className="h-5 w-5 text-primary/80" />
             <span className="text-sm">Online Store</span>
           </div>
-          <div className="flex items-center gap-2 text-foreground/80">
-            <Truck className="h-5 w-5 text-primary" />
+          <div className="flex items-center gap-2 text-foreground/70">
+            <Truck className="h-5 w-5 text-primary/80" />
             <span className="text-sm">Shipping All Egypt</span>
           </div>
-          <div className="flex items-center gap-2 text-foreground/80">
-            <CreditCard className="h-5 w-5 text-primary" />
+          <div className="flex items-center gap-2 text-foreground/70">
+            <CreditCard className="h-5 w-5 text-primary/80" />
             <span className="text-sm">Cash On Delivery</span>
           </div>
         </div>
