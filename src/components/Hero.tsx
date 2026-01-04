@@ -37,7 +37,7 @@ const Hero = () => {
 
         {/* Brands */}
         <p className="text-base md:text-lg text-muted-foreground mb-8 font-medium tracking-wide">
-          BMW · Mercedes · Audi · Porsche
+          Bmw · Mercedes · Audi · Porsche
         </p>
 
         {/* Features */}
