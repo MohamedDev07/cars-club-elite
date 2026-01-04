@@ -313,21 +313,19 @@ const Products = () => {
         <div className="flex flex-col items-center gap-4 mb-8">
           <div className="relative w-full max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
-            <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border-2 border-primary text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" style={{
-            boxShadow: "0 0 15px hsl(var(--primary) / 0.5)"
-          }} placeholder="Search BMW, Mercedes, Audi, Porsche..." />
+            <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Search BMW, Mercedes, Audi, Porsche..." />
           </div>
           
           {/* Category filter buttons */}
           <div className="flex flex-wrap justify-center gap-2 mb-2">
-            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-primary shadow-[0_0_20px_hsl(var(--primary)/0.7)]" : "bg-card text-foreground border-border hover:border-primary hover:shadow-[0_0_10px_hsl(var(--primary)/0.3)]"}`}>
+            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${selectedCategory === category ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}>
                 {category}
               </button>)}
           </div>
 
           {/* Brand filter buttons */}
           <div className="flex flex-wrap justify-center gap-2">
-            {brands.map(brand => <button key={brand} onClick={() => toggleBrand(brand)} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 ${selectedBrands.includes(brand) ? "bg-primary text-primary-foreground border-primary shadow-[0_0_15px_hsl(var(--primary)/0.6)]" : "bg-card text-foreground border-border hover:border-primary hover:shadow-[0_0_10px_hsl(var(--primary)/0.3)]"}`}>
+            {brands.map(brand => <button key={brand} onClick={() => toggleBrand(brand)} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedBrands.includes(brand) ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}>
                 {brand}
               </button>)}
           </div>
