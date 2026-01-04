@@ -17,11 +17,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-8 relative flex justify-center">
+          <div className="absolute inset-0 bg-primary/40 blur-[80px] rounded-full" />
           <img 
             src={logo} 
             alt="Cars Club Logo" 
-            className="h-36 w-36 md:h-48 md:w-48 mx-auto rounded-2xl object-contain shadow-lg shadow-primary/20" 
+            className="h-36 w-36 md:h-48 md:w-48 rounded-2xl object-contain relative z-10" 
           />
         </div>
 
