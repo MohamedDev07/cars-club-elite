@@ -3,14 +3,17 @@ import { ChevronDown, Truck, CreditCard, Store } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16 overflow-hidden">
-      {/* Subtle glow effect behind content */}
-      <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] md:w-[900px] md:h-[900px] rounded-full opacity-25 blur-[180px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, hsl(var(--neon) / 0.5) 0%, hsl(var(--neon) / 0.2) 30%, hsl(var(--neon) / 0.05) 60%, transparent 100%)'
-        }}
-      />
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.015]">
+        <div 
+          className="absolute inset-0" 
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--neon)) 1px, transparent 0)`,
+            backgroundSize: '60px 60px'
+          }} 
+        />
+      </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Logo */}
