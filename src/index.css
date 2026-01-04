@@ -57,8 +57,8 @@
 @layer utilities {
   .neon-text {
     color: hsl(var(--neon));
-    text-shadow: 0 0 8px hsl(var(--neon) / 0.3), 
-                 0 0 16px hsl(var(--neon) / 0.15);
+    text-shadow: 0 0 5px hsl(var(--neon) / 0.2), 
+                 0 0 10px hsl(var(--neon) / 0.1);
   }
 
   .neon-border {
