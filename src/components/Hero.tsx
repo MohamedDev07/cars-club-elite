@@ -6,9 +6,9 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative gradient-dark pt-16 overflow-hidden">
       {/* Subtle glow effect behind content */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full opacity-[0.12] blur-[150px] pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] md:w-[900px] md:h-[900px] rounded-full opacity-25 blur-[180px] pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--neon) / 0.3) 0%, transparent 60%)'
+          background: 'radial-gradient(circle, hsl(var(--neon) / 0.5) 0%, hsl(var(--neon) / 0.2) 30%, hsl(var(--neon) / 0.05) 60%, transparent 100%)'
         }}
       />
       
