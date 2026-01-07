@@ -1,4 +1,3 @@
-import logo from "@/assets/logo.jpg";
 import { ChevronDown, Truck, CreditCard, Store } from "lucide-react";
 
 const Hero = () => {
@@ -19,7 +18,7 @@ const Hero = () => {
         {/* Logo */}
         <div className="mb-6">
         <img 
-            src={logo} 
+            src="/logo.jpg" 
             alt="Cars Club Logo" 
             width={176}
             height={176}
