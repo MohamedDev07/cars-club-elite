@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search } from "lucide-react";
 import ProductCard from "./ProductCard";
 import product1 from "@/assets/product1.jpg";
 import product2 from "@/assets/product2.jpg";
@@ -282,27 +282,22 @@ const wheelsRimsProducts = [{
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
 const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims"] as const;
-const ITEMS_PER_PAGE = 8;
 
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Sports Body Kit");
-  const [currentPage, setCurrentPage] = useState(1);
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
-    setCurrentPage(1);
   };
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    setCurrentPage(1);
   };
 
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
-    setCurrentPage(1);
   };
 
   const currentProducts = selectedCategory === "Sports Body Kit" 
@@ -318,18 +313,6 @@ const Products = () => {
       return matchesSearch && matchesBrand;
     });
   }, [currentProducts, searchTerm, selectedBrands]);
-
-  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
-  
-  const paginatedProducts = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    return filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-  }, [filteredProducts, currentPage]);
-
-  const goToPage = (page: number) => {
-    setCurrentPage(Math.max(1, Math.min(page, totalPages)));
-    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="products" className="py-20 bg-background">
@@ -384,47 +367,10 @@ const Products = () => {
 
         {/* Products grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {paginatedProducts.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard key={index} image={product.image} title={product.title} />
           ))}
         </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-10">
-            <button
-              onClick={() => goToPage(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="p-2 rounded-lg border border-border bg-card text-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              aria-label="Previous page"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-              <button
-                key={page}
-                onClick={() => goToPage(page)}
-                className={`w-10 h-10 rounded-lg text-sm font-medium transition-all duration-300 border ${
-                  currentPage === page 
-                    ? "bg-primary text-primary-foreground border-primary" 
-                    : "bg-card text-foreground border-border hover:border-primary"
-                }`}
-              >
-                {page}
-              </button>
-            ))}
-            
-            <button
-              onClick={() => goToPage(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="p-2 rounded-lg border border-border bg-card text-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              aria-label="Next page"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
