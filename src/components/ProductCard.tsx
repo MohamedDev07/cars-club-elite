@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProductModal from "./ProductModal";
 
 interface ProductCardProps {
@@ -8,16 +8,6 @@ interface ProductCardProps {
 
 const ProductCard = ({ image, title }: ProductCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [currentImage, setCurrentImage] = useState(image);
-
-  // Reset loading state when image changes
-  useEffect(() => {
-    if (image !== currentImage) {
-      setImageLoaded(false);
-      setCurrentImage(image);
-    }
-  }, [image, currentImage]);
 
   return (
     <>
@@ -27,13 +17,6 @@ const ProductCard = ({ image, title }: ProductCardProps) => {
           className="relative overflow-hidden cursor-pointer" 
           onClick={() => setIsModalOpen(true)}
         >
-          {/* Loading skeleton */}
-          {!imageLoaded && (
-            <div 
-              className="absolute inset-0 bg-muted animate-pulse"
-              style={{ aspectRatio: '306/382' }}
-            />
-          )}
           <img 
             src={image} 
             alt={title} 
@@ -42,10 +25,7 @@ const ProductCard = ({ image, title }: ProductCardProps) => {
             width="306"
             height="382"
             style={{ aspectRatio: '306/382' }}
-            onLoad={() => setImageLoaded(true)}
-            className={`w-full h-auto object-contain transition-opacity duration-300 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className="w-full h-auto object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
             <span className="text-primary text-sm font-medium">View Details</span>
