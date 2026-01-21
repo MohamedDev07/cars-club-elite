@@ -1,4 +1,12 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { Search } from "lucide-react";
 import ProductCard from "./ProductCard";
 import product1 from "@/assets/product1.jpg";
@@ -283,21 +291,27 @@ const wheelsRimsProducts = [{
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
 const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims"] as const;
 
+const PRODUCTS_PER_PAGE = 8;
+
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Sports Body Kit");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
+    setCurrentPage(1);
   };
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
+    setCurrentPage(1);
   };
 
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
+    setCurrentPage(1);
   };
 
   const currentProducts = selectedCategory === "Sports Body Kit" 
@@ -313,6 +327,25 @@ const Products = () => {
       return matchesSearch && matchesBrand;
     });
   }, [currentProducts, searchTerm, selectedBrands]);
+
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  
+  // Reset page if current page exceeds total pages
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1);
+    }
+  }, [totalPages, currentPage]);
+
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
+    return filteredProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
+  }, [filteredProducts, currentPage]);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section id="products" className="py-20 bg-background">
@@ -367,10 +400,43 @@ const Products = () => {
 
         {/* Products grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {filteredProducts.map((product, index) => (
-            <ProductCard key={index} image={product.image} title={product.title} />
+          {paginatedProducts.map((product, index) => (
+            <ProductCard key={`${selectedCategory}-${currentPage}-${index}`} image={product.image} title={product.title} />
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <Pagination className="mt-8">
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <PaginationItem key={page}>
+                  <PaginationLink
+                    onClick={() => handlePageChange(page)}
+                    isActive={currentPage === page}
+                    className="cursor-pointer"
+                  >
+                    {page}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              
+              <PaginationItem>
+                <PaginationNext 
+                  onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
       </div>
     </section>
   );
