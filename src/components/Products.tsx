@@ -73,6 +73,10 @@ import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
 import mercedesWheels4 from "@/assets/Mercedes_Wheels_4.jpg";
 import mercedesWheels5 from "@/assets/Mercedes_Wheels_5.jpg";
 import mercedesWheels6 from "@/assets/Mercedes_Wheels_6.jpg";
+import audiWheels1 from "@/assets/Audi_Wheels_1.jpg";
+import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
+import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
+import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
 
 const bodyKitProducts = [{
   image: mercedesC_W206,
@@ -278,6 +282,18 @@ const wheelsRimsProducts = [{
 }, {
   image: mercedesWheels6,
   title: "Mercedes Benz Brabus Wheels 6"
+}, {
+  image: audiWheels1,
+  title: "Audi Rs Wheels 1"
+}, {
+  image: audiWheels2,
+  title: "Audi Rs Wheels 2"
+}, {
+  image: audiWheels3,
+  title: "Audi Rs Wheels 3"
+}, {
+  image: audiWheels4,
+  title: "Audi Rs Wheels 4"
 }];
 
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
