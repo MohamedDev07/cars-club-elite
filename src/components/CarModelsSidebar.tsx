@@ -92,8 +92,8 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel) => {
-    // Search by the model code to find both body kit and hood/fender
-    onSelectModel(model.code);
+    // Search by model name + code for exact matching (e.g., "A5 B9" not just "B9")
+    onSelectModel(`${model.name} ${model.code}`);
     onClose();
   };
 
