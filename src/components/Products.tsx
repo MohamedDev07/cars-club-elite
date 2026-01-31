@@ -55,7 +55,9 @@ import c63HoodFendersW204 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_
 import c63HoodFendersW205 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_W205.jpg";
 import c63HoodFendersW206 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_W206.jpg";
 import csHoodM3FendersG20 from "@/assets/Cs_Hood_M3_Fenders_For_Bmw_G20.jpg";
+import csHoodM3FendersG20Lci from "@/assets/Cs_Hood_M3_Fenders_For_Bmw_G20_Lci.jpg";
 import csHoodM5FendersG30 from "@/assets/Cs_Hood_M5_Fenders_For_Bmw_G30.jpg";
+import csHoodM5FendersG30Lci from "@/assets/Cs_Hood_M5_Fenders_For_Bmw_G30_Lci.jpg";
 import e63HoodFendersW212 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W212.jpg";
 import e63HoodFendersW213 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213.jpg";
 import e63HoodFendersW213FL from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213_Facelift.jpg";
@@ -98,7 +100,7 @@ const bodyKitProducts = [{
   title: "BMW X-Series X6 G06 LCI X6M Body Kit"
 }, {
   image: product4,
-  title: "Mercedes Benz GLC-Class X254 FaceLift GC63 AMG Body Kit"
+  title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit"
 }, {
   image: mercedesW176,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
@@ -218,8 +220,14 @@ const hoodFenderProducts = [{
   image: csHoodM3FendersG20,
   title: "Cs Hood M3 Fenders For Bmw G20"
 }, {
+  image: csHoodM3FendersG20Lci,
+  title: "Cs Hood M3 Fenders For Bmw G20 Lci"
+}, {
   image: csHoodM5FendersG30,
   title: "Cs Hood M5 Fenders For Bmw G30"
+}, {
+  image: csHoodM5FendersG30Lci,
+  title: "Cs Hood M5 Fenders For Bmw G30 Lci"
 }, {
   image: c63HoodFendersW204,
   title: "C63 Hood C63 Fenders For Mercedes Benz W204"
