@@ -311,6 +311,7 @@ const Products = () => {
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Sports Body Kit");
   const [currentPage, setCurrentPage] = useState(1);
+  const [isSearching, setIsSearching] = useState(false);
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
@@ -320,12 +321,22 @@ const Products = () => {
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
     setCurrentPage(1);
+    setIsSearching(false);
+    setSearchTerm("");
   };
 
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
     setCurrentPage(1);
+    setIsSearching(value.length > 0);
   };
+
+  // All products combined for search
+  const allProducts = useMemo(() => [
+    ...bodyKitProducts.map(p => ({ ...p, category: "Sports Body Kit" })),
+    ...hoodFenderProducts.map(p => ({ ...p, category: "Sports Hood & Sports Fender" })),
+    ...wheelsRimsProducts.map(p => ({ ...p, category: "Sports Wheels Rims" }))
+  ], []);
 
   const currentProducts = selectedCategory === "Sports Body Kit" 
     ? bodyKitProducts 
@@ -334,12 +345,13 @@ const Products = () => {
       : wheelsRimsProducts;
 
   const filteredProducts = useMemo(() => {
-    return currentProducts.filter(product => {
+    const productsToFilter = isSearching ? allProducts : currentProducts;
+    return productsToFilter.filter(product => {
       const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesBrand = selectedBrands.length === 0 || selectedBrands.some(brand => product.title.toLowerCase().includes(brand.toLowerCase()));
       return matchesSearch && matchesBrand;
     });
-  }, [currentProducts, searchTerm, selectedBrands]);
+  }, [currentProducts, allProducts, searchTerm, selectedBrands, isSearching]);
 
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   
@@ -368,7 +380,9 @@ const Products = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
             <span className="neon-text">Products</span>
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">{selectedCategory}</p>
+          <p className="text-muted-foreground max-w-md mx-auto">
+            {isSearching ? `نتائج البحث في جميع الأقسام (${filteredProducts.length})` : selectedCategory}
+          </p>
         </div>
 
         {/* Search bar and filters */}
