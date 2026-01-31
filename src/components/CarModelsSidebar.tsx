@@ -91,15 +91,9 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
     );
   };
 
-  const handleModelClick = (brand: string, model: CarModel, type: "bodykit" | "hoodfender") => {
-    let searchTerm = "";
-    if (type === "bodykit") {
-      searchTerm = `${brand} ${model.name} ${model.code}`;
-    } else {
-      // For hood & fender, search by the style name and code
-      searchTerm = `${model.hoodFenderStyle} ${model.code}`;
-    }
-    onSelectModel(searchTerm);
+  const handleModelClick = (model: CarModel) => {
+    // Search by the model code to find both body kit and hood/fender
+    onSelectModel(model.code);
     onClose();
   };
 
@@ -154,35 +148,16 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
               {expandedBrands.includes(brand.name) && (
                 <div className="ml-2 mb-2">
                   {brand.models.map((model) => (
-                    <div key={`${model.name}-${model.code}`} className="mb-1">
-                      <div className="px-4 py-2 text-sm font-medium text-foreground">
-                        {model.name} {model.code}
-                      </div>
-                      <div className="ml-4 flex flex-col gap-1">
-                        {model.hasBodyKit && (
-                          <button
-                            onClick={() => handleModelClick(brand.name, model, "bodykit")}
-                            className="w-full text-left px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors flex items-center gap-2"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                            Body Kit
-                          </button>
-                        )}
-                        {model.hasHoodFender && (
-                          <button
-                            onClick={() => handleModelClick(brand.name, model, "hoodfender")}
-                            className="w-full text-left px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors flex items-center gap-2"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                            {model.hoodFenderStyle} Hood & Fenders
-                          </button>
-                        )}
-                      </div>
-                    </div>
+                    <button
+                      key={`${model.name}-${model.code}`}
+                      onClick={() => handleModelClick(model)}
+                      className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
+                    >
+                      {model.name} {model.code}
+                    </button>
                   ))}
                 </div>
               )}
-
               {/* Divider between brands */}
               {brandIndex < carBrands.length - 1 && (
                 <div className="mx-3 border-b border-border/50" />
