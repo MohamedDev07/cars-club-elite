@@ -381,7 +381,7 @@ const Products = () => {
             <span className="neon-text">Products</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
-            {isSearching ? `نتائج البحث في جميع الأقسام (${filteredProducts.length})` : selectedCategory}
+            {isSearching ? `Search results in all categories (${filteredProducts.length})` : selectedCategory}
           </p>
         </div>
 
@@ -404,7 +404,13 @@ const Products = () => {
               <button 
                 key={category} 
                 onClick={() => handleCategoryChange(category)} 
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${selectedCategory === category ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${
+                  isSearching 
+                    ? "bg-primary text-primary-foreground border-primary" 
+                    : selectedCategory === category 
+                      ? "bg-primary text-primary-foreground border-primary" 
+                      : "bg-card text-foreground border-border hover:border-primary"
+                }`}
               >
                 {category}
               </button>
