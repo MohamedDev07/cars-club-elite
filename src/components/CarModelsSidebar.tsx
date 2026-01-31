@@ -51,7 +51,7 @@ const carBrands: Brand[] = [
       { name: "G-Class", code: "W463", hasBodyKit: true },
       { name: "GLC-Class", code: "X253", hasBodyKit: true },
       { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
-      { name: "GLC-Class", code: "X254 FaceLift", hasBodyKit: true },
+      { name: "GLC-Class", code: "X254", hasBodyKit: true },
     ]
   },
   {
