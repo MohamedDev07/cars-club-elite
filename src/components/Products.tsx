@@ -7,7 +7,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Search } from "lucide-react";
+import { Search, List } from "lucide-react";
+import CarModelsSidebar from "./CarModelsSidebar";
 import ProductCard from "./ProductCard";
 import product1 from "@/assets/product1.jpg";
 import product2 from "@/assets/product2.jpg";
@@ -312,6 +313,13 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("Sports Body Kit");
   const [currentPage, setCurrentPage] = useState(1);
   const [isSearching, setIsSearching] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleSidebarSelect = (term: string) => {
+    setSearchTerm(term);
+    setIsSearching(true);
+    setCurrentPage(1);
+  };
 
   const toggleBrand = (brand: string) => {
     setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
@@ -387,15 +395,24 @@ const Products = () => {
 
         {/* Search bar and filters */}
         <div className="flex flex-col items-center gap-4 mb-8">
-          <div className="relative w-full max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
-            <input 
-              type="text" 
-              value={searchTerm} 
-              onChange={e => handleSearchChange(e.target.value)} 
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" 
-              placeholder="Search BMW, Mercedes, Audi, Porsche..." 
-            />
+          <div className="flex items-center gap-2 w-full max-w-md">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
+              <input 
+                type="text" 
+                value={searchTerm} 
+                onChange={e => handleSearchChange(e.target.value)} 
+                className="w-full pl-10 pr-4 py-3 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all" 
+                placeholder="Search BMW, Mercedes, Audi, Porsche..." 
+              />
+            </div>
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="p-3 bg-card border border-border rounded-lg hover:border-primary transition-colors"
+              title="Browse Car Models"
+            >
+              <List className="h-5 w-5 text-primary" />
+            </button>
           </div>
           
           {/* Category filter buttons */}
@@ -470,6 +487,13 @@ const Products = () => {
             </PaginationContent>
           </Pagination>
         )}
+
+        {/* Car Models Sidebar */}
+        <CarModelsSidebar 
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+          onSelectModel={handleSidebarSelect}
+        />
       </div>
     </section>
   );
