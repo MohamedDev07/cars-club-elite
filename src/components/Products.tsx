@@ -98,7 +98,7 @@ const bodyKitProducts = [{
   title: "BMW X-Series X6 G06 LCI X6M Body Kit"
 }, {
   image: product4,
-  title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit"
+  title: "Mercedes Benz GLC-Class X254 FaceLift GC63 AMG Body Kit"
 }, {
   image: mercedesW176,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
@@ -161,7 +161,7 @@ const bodyKitProducts = [{
   title: "BMW X-Series X6 G06 X6M Body Kit"
 }, {
   image: mercedesGLC_X253_FL,
-  title: "Mercedes Benz GLC-Class X253 Face Lift GC63 AMG Body Kit"
+  title: "Mercedes Benz GLC-Class X253 FaceLift GC63 AMG Body Kit"
 }, {
   image: mercedesGLC_X253,
   title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit"
@@ -185,7 +185,7 @@ const bodyKitProducts = [{
   title: "Mercedes Benz E-Class W213 E63 AMG Body Kit"
 }, {
   image: mercedesE_W213_FL,
-  title: "Mercedes Benz E-Class W213 Face Lift E63 AMG Body Kit"
+  title: "Mercedes Benz E-Class W213 FaceLift E63 AMG Body Kit"
 }, {
   image: mercedesG_W264,
   title: "Mercedes Benz G-Class W463 G63 Brabus Body Kit"
