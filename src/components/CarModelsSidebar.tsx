@@ -5,6 +5,9 @@ import { cn } from "@/lib/utils";
 interface CarModel {
   name: string;
   code: string;
+  hasBodyKit?: boolean;
+  hasHoodFender?: boolean;
+  hoodFenderStyle?: string; // e.g., "M3", "M5", "GTS", "GTR", "CS", "C63", "E63"
 }
 
 interface Brand {
@@ -16,57 +19,57 @@ const carBrands: Brand[] = [
   {
     name: "BMW",
     models: [
-      { name: "1-Series", code: "F20" },
-      { name: "2-Series", code: "F22" },
-      { name: "3-Series", code: "E90" },
-      { name: "3-Series", code: "F30" },
-      { name: "3-Series", code: "G20" },
-      { name: "3-Series", code: "G20 LCI" },
-      { name: "4-Series", code: "G22" },
-      { name: "5-Series", code: "E60" },
-      { name: "5-Series", code: "F10" },
-      { name: "5-Series", code: "G30" },
-      { name: "5-Series", code: "G30 LCI" },
-      { name: "X6", code: "F16" },
-      { name: "X6", code: "G06" },
-      { name: "X6", code: "G06 LCI" },
+      { name: "1-Series", code: "F20", hasBodyKit: true },
+      { name: "2-Series", code: "F22", hasBodyKit: true },
+      { name: "3-Series", code: "E90", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "M3" },
+      { name: "3-Series", code: "F30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTS" },
+      { name: "3-Series", code: "G20", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
+      { name: "3-Series", code: "G20 LCI", hasBodyKit: true },
+      { name: "4-Series", code: "G22", hasBodyKit: true },
+      { name: "5-Series", code: "E60", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
+      { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
+      { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
+      { name: "5-Series", code: "G30 LCI", hasBodyKit: true },
+      { name: "X6", code: "F16", hasBodyKit: true },
+      { name: "X6", code: "G06", hasBodyKit: true },
+      { name: "X6", code: "G06 LCI", hasBodyKit: true },
     ]
   },
   {
     name: "Mercedes Benz",
     models: [
-      { name: "A-Class", code: "W176" },
-      { name: "A-Class", code: "W177" },
-      { name: "C-Class", code: "W204" },
-      { name: "C-Class", code: "W205" },
-      { name: "C-Class", code: "W206" },
-      { name: "CLA-Class", code: "W117" },
-      { name: "CLA-Class", code: "W118" },
-      { name: "E-Class", code: "W212" },
-      { name: "E-Class", code: "W213" },
-      { name: "E-Class", code: "W213 FL" },
-      { name: "G-Class", code: "W463" },
-      { name: "GLC-Class", code: "X253" },
-      { name: "GLC-Class", code: "X253 FL" },
-      { name: "GLC-Class", code: "X254" },
+      { name: "A-Class", code: "W176", hasBodyKit: true },
+      { name: "A-Class", code: "W177", hasBodyKit: true },
+      { name: "C-Class", code: "W204", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "C63" },
+      { name: "C-Class", code: "W205", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "C63" },
+      { name: "C-Class", code: "W206", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "C63" },
+      { name: "CLA-Class", code: "W117", hasBodyKit: true },
+      { name: "CLA-Class", code: "W118", hasBodyKit: true },
+      { name: "E-Class", code: "W212", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
+      { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
+      { name: "E-Class", code: "W213 FL", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
+      { name: "G-Class", code: "W463", hasBodyKit: true },
+      { name: "GLC-Class", code: "X253", hasBodyKit: true },
+      { name: "GLC-Class", code: "X253 FL", hasBodyKit: true },
+      { name: "GLC-Class", code: "X254", hasBodyKit: true },
     ]
   },
   {
     name: "Audi",
     models: [
-      { name: "A3", code: "8V.5" },
-      { name: "A3", code: "8Y" },
-      { name: "A4", code: "B9" },
-      { name: "A4", code: "B9.5" },
-      { name: "A5", code: "B9" },
-      { name: "A5", code: "B9.5" },
+      { name: "A3", code: "8V.5", hasBodyKit: true },
+      { name: "A3", code: "8Y", hasBodyKit: true },
+      { name: "A4", code: "B9", hasBodyKit: true },
+      { name: "A4", code: "B9.5", hasBodyKit: true },
+      { name: "A5", code: "B9", hasBodyKit: true },
+      { name: "A5", code: "B9.5", hasBodyKit: true },
     ]
   },
   {
     name: "Porsche",
     models: [
-      { name: "718", code: "GT4 RS" },
-      { name: "981", code: "GT4 RS" },
+      { name: "718", code: "GT4 RS", hasBodyKit: true },
+      { name: "981", code: "GT4 RS", hasBodyKit: true },
     ]
   }
 ];
@@ -88,8 +91,14 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
     );
   };
 
-  const handleModelClick = (brand: string, model: CarModel) => {
-    const searchTerm = `${brand} ${model.name} ${model.code}`;
+  const handleModelClick = (brand: string, model: CarModel, type: "bodykit" | "hoodfender") => {
+    let searchTerm = "";
+    if (type === "bodykit") {
+      searchTerm = `${brand} ${model.name} ${model.code}`;
+    } else {
+      // For hood & fender, search by the style name and code
+      searchTerm = `${model.hoodFenderStyle} ${model.code}`;
+    }
     onSelectModel(searchTerm);
     onClose();
   };
@@ -144,14 +153,32 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
               {/* Models List */}
               {expandedBrands.includes(brand.name) && (
                 <div className="ml-2 mb-2">
-                  {brand.models.map((model, modelIndex) => (
-                    <button
-                      key={`${model.name}-${model.code}`}
-                      onClick={() => handleModelClick(brand.name, model)}
-                      className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
-                    >
-                      {model.name} {model.code}
-                    </button>
+                  {brand.models.map((model) => (
+                    <div key={`${model.name}-${model.code}`} className="mb-1">
+                      <div className="px-4 py-2 text-sm font-medium text-foreground">
+                        {model.name} {model.code}
+                      </div>
+                      <div className="ml-4 flex flex-col gap-1">
+                        {model.hasBodyKit && (
+                          <button
+                            onClick={() => handleModelClick(brand.name, model, "bodykit")}
+                            className="w-full text-left px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors flex items-center gap-2"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+                            Body Kit
+                          </button>
+                        )}
+                        {model.hasHoodFender && (
+                          <button
+                            onClick={() => handleModelClick(brand.name, model, "hoodfender")}
+                            className="w-full text-left px-3 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors flex items-center gap-2"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+                            {model.hoodFenderStyle} Hood & Fenders
+                          </button>
+                        )}
+                      </div>
+                    </div>
                   ))}
                 </div>
               )}
