@@ -31,7 +31,7 @@ import bmw5_E60 from "@/assets/BMW_5-Series_E60_M5_Body_Kit.jpg";
 import bmw5_F10 from "@/assets/BMW_5-Series_F10_M5_Body_Kit.jpg";
 import bmw5_G30_Lci from "@/assets/BMW_5-Series_G30_Lci_M5_Body_Kit.jpg";
 import bmw5_G30 from "@/assets/BMW_5-Series_G30_M5_Body_Kit.jpg";
-import bmw6_F12 from "@/assets/BMW_6-Series_F12_M6_Body_Kit.jpg";
+
 import bmwX6_F16 from "@/assets/BMW_X-Series_X6_F16_X6M_Body_Kit.jpg";
 import bmwX6_G06 from "@/assets/BMW_X-Series_X6_G06_X6M_Body_Kit.jpg";
 import mercedesGLC_X253_FL from "@/assets/Mercedes_Benz_GLC-Class_X253_Face_Lift_GC63_AMG_Body_Kit.jpg";
@@ -152,9 +152,6 @@ const bodyKitProducts = [{
 }, {
   image: bmw5_G30,
   title: "BMW 5-Series G30 M5 Body Kit"
-}, {
-  image: bmw6_F12,
-  title: "BMW 6-Series F12 M6 Body Kit"
 }, {
   image: bmwX6_F16,
   title: "BMW X-Series X6 F16 X6M Body Kit"
