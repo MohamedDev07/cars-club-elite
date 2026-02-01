@@ -46,6 +46,7 @@ const carBrands: Brand[] = [
       { name: "CLA-Class", code: "W117", hasBodyKit: true },
       { name: "CLA-Class", code: "W118", hasBodyKit: true },
       { name: "E-Class", code: "W212", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
+      { name: "E-Class", code: "W212 FaceLift", hasBodyKit: true },
       { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "G-Class", code: "W463", hasBodyKit: true },
