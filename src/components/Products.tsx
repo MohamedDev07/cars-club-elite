@@ -62,6 +62,7 @@ import csHoodM5FendersG30Lci from "@/assets/Cs_Hood_M5_Fenders_For_Bmw_G30_Lci.j
 import e63HoodFendersW212 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W212.jpg";
 import e63HoodFendersW213 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213.jpg";
 import e63HoodFendersW213FL from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W213_Facelift.jpg";
+import e63HoodFendersW212FL from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W212_FaceLift.jpg";
 import gtrHoodM5FendersE60 from "@/assets/Gtr_Hood_M5_Fenders_For_Bmw_E60.jpg";
 import m3HoodM3FendersE90 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E90.jpg";
 import gtsHoodM3FendersF30 from "@/assets/Gts_Hood_M3_Fenders_For_Bmw_F30.jpg";
@@ -244,6 +245,9 @@ const hoodFenderProducts = [{
 }, {
   image: e63HoodFendersW213FL,
   title: "E63 Hood E63 Fenders For Mercedes Benz W213 Facelift"
+}, {
+  image: e63HoodFendersW212FL,
+  title: "E63 Hood E63 Fenders For Mercedes Benz W212 FaceLift"
 }];
 
 const wheelsRimsProducts = [{
