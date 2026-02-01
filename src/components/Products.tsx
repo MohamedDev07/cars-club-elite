@@ -42,7 +42,8 @@ import mercedesC_W205 from "@/assets/Mercedes_Benz_C-Class_W205_C63_AMG_Body_Kit
 import mercedesC_W206 from "@/assets/Mercedes_Benz_C-Class_W206_C63_AMG_Body_Kit.jpg";
 import mercedesCla_W117 from "@/assets/Mercedes_Benz_Cla-Class_W117_Cla45_AMG_Body_Kit.jpg";
 import mercedesCla_W118 from "@/assets/Mercedes_Benz_Cla-Class_W118_Cla45_AMG_Body_Kit.jpg";
-import mercedesE_W212 from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_Kit.jpg";
+import mercedesE_W212 from "@/assets/Mercedes_Benz_E-Class_W212_Pre_FaceLift_E63_AMG_Body_Kit.jpg";
+import mercedesE_W212_FL from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213 from "@/assets/Mercedes_Benz_E-Class_W213_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63_AMG_Body_Kit.jpg";
 import mercedesG_W264 from "@/assets/Mercedes_Benz_G-Class_W264_G63_Brabus_Body_Kit.jpg";
@@ -182,6 +183,9 @@ const bodyKitProducts = [{
 }, {
   image: mercedesE_W212,
   title: "Mercedes Benz E-Class W212 E63 AMG Body Kit"
+}, {
+  image: mercedesE_W212_FL,
+  title: "Mercedes Benz E-Class W212 FaceLift E63 AMG Body Kit"
 }, {
   image: mercedesE_W213,
   title: "Mercedes Benz E-Class W213 E63 AMG Body Kit"
