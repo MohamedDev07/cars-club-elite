@@ -94,13 +94,8 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel) => {
-    onSelectModel(`${model.name} ${model.code}`);
-    onClose();
-  };
-
-  const handleHoodFenderClick = (brand: Brand, model: CarModel) => {
-    const brandName = brand.name === "BMW" ? "Bmw" : brand.name;
-    onSelectModel(`Fenders For ${brandName} ${model.code}`);
+    // Search by code only to match across all categories (body kit, hood & fender, wheels)
+    onSelectModel(model.code);
     onClose();
   };
 
@@ -155,22 +150,13 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
               {expandedBrands.includes(brand.name) && (
                 <div className="ml-2 mb-2">
                   {brand.models.map((model) => (
-                    <div key={`${model.name}-${model.code}`}>
-                      <button
-                        onClick={() => handleModelClick(model)}
-                        className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
-                      >
-                        {model.name} {model.code}
-                      </button>
-                      {model.hasHoodFender && (
-                        <button
-                          onClick={() => handleHoodFenderClick(brand, model)}
-                          className="w-full text-left px-4 py-2 pl-8 text-xs text-muted-foreground/70 hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
-                        >
-                          ↳ Hood & Fenders
-                        </button>
-                      )}
-                    </div>
+                    <button
+                      key={`${model.name}-${model.code}`}
+                      onClick={() => handleModelClick(model)}
+                      className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
+                    >
+                      {model.name} {model.code}
+                    </button>
                   ))}
                 </div>
               )}
