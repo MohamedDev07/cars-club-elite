@@ -20,6 +20,7 @@ const carBrands: Brand[] = [
     name: "BMW",
     models: [
       { name: "1-Series", code: "F20", hasBodyKit: true },
+      { name: "1-Series", code: "F20 Lci", hasBodyKit: true },
       { name: "2-Series", code: "F22", hasBodyKit: true },
       { name: "3-Series", code: "E90", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "M3" },
       { name: "3-Series", code: "F30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTS" },
@@ -49,7 +50,7 @@ const carBrands: Brand[] = [
       { name: "E-Class", code: "W212 FaceLift", hasBodyKit: true },
       { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
-      { name: "G-Class", code: "W463", hasBodyKit: true },
+      { name: "G-Class", code: "W464", hasBodyKit: true },
       { name: "GLC-Class", code: "X253", hasBodyKit: true },
       { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
       { name: "GLC-Class", code: "X254", hasBodyKit: true },
