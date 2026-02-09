@@ -25,12 +25,12 @@ const carBrands: Brand[] = [
       { name: "3-Series", code: "E90", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "M3" },
       { name: "3-Series", code: "F30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTS" },
       { name: "3-Series", code: "G20", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
-      { name: "3-Series", code: "G20 LCI", hasBodyKit: true },
+      { name: "3-Series", code: "G20 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "4-Series", code: "G22", hasBodyKit: true },
       { name: "5-Series", code: "E60", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
-      { name: "5-Series", code: "G30 LCI", hasBodyKit: true },
+      { name: "5-Series", code: "G30 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "X6", code: "F16", hasBodyKit: true },
       { name: "X6", code: "G06", hasBodyKit: true },
       { name: "X6", code: "G06 LCI", hasBodyKit: true },
@@ -47,7 +47,7 @@ const carBrands: Brand[] = [
       { name: "CLA-Class", code: "W117", hasBodyKit: true },
       { name: "CLA-Class", code: "W118", hasBodyKit: true },
       { name: "E-Class", code: "W212", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
-      { name: "E-Class", code: "W212 FaceLift", hasBodyKit: true },
+      { name: "E-Class", code: "W212 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "G-Class", code: "W464", hasBodyKit: true },
@@ -94,8 +94,13 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel) => {
-    // Search by model name + code for exact matching (e.g., "A5 B9" not just "B9")
     onSelectModel(`${model.name} ${model.code}`);
+    onClose();
+  };
+
+  const handleHoodFenderClick = (brand: Brand, model: CarModel) => {
+    const brandName = brand.name === "BMW" ? "Bmw" : brand.name;
+    onSelectModel(`Fenders For ${brandName} ${model.code}`);
     onClose();
   };
 
@@ -150,13 +155,22 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
               {expandedBrands.includes(brand.name) && (
                 <div className="ml-2 mb-2">
                   {brand.models.map((model) => (
-                    <button
-                      key={`${model.name}-${model.code}`}
-                      onClick={() => handleModelClick(model)}
-                      className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
-                    >
-                      {model.name} {model.code}
-                    </button>
+                    <div key={`${model.name}-${model.code}`}>
+                      <button
+                        onClick={() => handleModelClick(model)}
+                        className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
+                      >
+                        {model.name} {model.code}
+                      </button>
+                      {model.hasHoodFender && (
+                        <button
+                          onClick={() => handleHoodFenderClick(brand, model)}
+                          className="w-full text-left px-4 py-2 pl-8 text-xs text-muted-foreground/70 hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
+                        >
+                          ↳ Hood & Fenders
+                        </button>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
