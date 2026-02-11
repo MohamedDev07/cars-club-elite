@@ -27,6 +27,7 @@ import bmw3_G20_Lci from "@/assets/BMW_3-Series_G20_Lci_M3_Body_Kit.jpg";
 import mercedesW177 from "@/assets/Mercedes_Benz_A-Class_W177_A45_AMG_Body_Kit.jpg";
 import mercedesW176 from "@/assets/Mercedes_Benz_A-Class_W176_A45_AMG_Body_Kit.jpg";
 import bmw1_F20_Lci from "@/assets/BMW_1-Series_F20_Lci_M1_Body_Kit.jpg";
+import bmw1_E87 from "@/assets/BMW_1-Series_E87_1M_Body_Kit.jpg";
 import bmw3_G20 from "@/assets/BMW_3-Series_G20_M3_Body_Kit.jpg";
 import bmw4_G22 from "@/assets/BMW_4-Series_G22_M4_Body_Kit.jpg";
 import bmw5_E60 from "@/assets/BMW_5-Series_E60_M5_Body_Kit.jpg";
@@ -92,6 +93,10 @@ import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
 import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
 import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
 
+// Hidden products (kept in data for future use):
+// { image: product2, title: "BMW 1-Series F20 M1 Body Kit" },
+// { image: bmw1_F20_Lci, title: "BMW 1-Series F20 Lci M1 Body Kit" },
+
 const bodyKitProducts = [{
   image: mercedesC_W206,
   title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
@@ -108,11 +113,8 @@ const bodyKitProducts = [{
   image: mercedesW176,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
 }, {
-  image: product2,
-  title: "BMW 1-Series F20 M1 Body Kit"
-}, {
-  image: bmw1_F20_Lci,
-  title: "BMW 1-Series F20 Lci M1 Body Kit"
+  image: bmw1_E87,
+  title: "BMW 1-Series E87 1M Body Kit"
 }, {
   image: audiA3_8V5,
   title: "Audi A3 8V.5 Rs Body Kit"
