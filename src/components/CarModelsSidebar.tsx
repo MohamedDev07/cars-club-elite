@@ -19,8 +19,9 @@ const carBrands: Brand[] = [
   {
     name: "BMW",
     models: [
-      { name: "1-Series", code: "F20", hasBodyKit: true },
-      { name: "1-Series", code: "F20 Lci", hasBodyKit: true },
+      { name: "1-Series", code: "E87", hasBodyKit: true },
+      // Hidden: { name: "1-Series", code: "F20", hasBodyKit: true },
+      // Hidden: { name: "1-Series", code: "F20 Lci", hasBodyKit: true },
       { name: "2-Series", code: "F22", hasBodyKit: true },
       { name: "3-Series", code: "E90", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "M3" },
       { name: "3-Series", code: "F30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTS" },
