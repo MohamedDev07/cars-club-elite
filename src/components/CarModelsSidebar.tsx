@@ -32,9 +32,9 @@ const carBrands: Brand[] = [
       { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "5-Series", code: "G30 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
-      { name: "X6", code: "F16", hasBodyKit: true },
-      { name: "X6", code: "G06", hasBodyKit: true },
-      { name: "X6", code: "G06 LCI", hasBodyKit: true },
+      // Hidden: { name: "X6", code: "F16", hasBodyKit: true },
+      // Hidden: { name: "X6", code: "G06", hasBodyKit: true },
+      // Hidden: { name: "X6", code: "G06 LCI", hasBodyKit: true },
     ]
   },
   {
@@ -52,9 +52,9 @@ const carBrands: Brand[] = [
       { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "G-Class", code: "W464", hasBodyKit: true },
-      { name: "GLC-Class", code: "X253", hasBodyKit: true },
-      { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
-      { name: "GLC-Class", code: "X254", hasBodyKit: true },
+      // Hidden: { name: "GLC-Class", code: "X253", hasBodyKit: true },
+      // Hidden: { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
+      // Hidden: { name: "GLC-Class", code: "X254", hasBodyKit: true },
     ]
   },
   {

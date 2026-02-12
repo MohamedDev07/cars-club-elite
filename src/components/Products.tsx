@@ -96,6 +96,12 @@ import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
 // Hidden products (kept in data for future use):
 // { image: product2, title: "BMW 1-Series F20 M1 Body Kit" },
 // { image: bmw1_F20_Lci, title: "BMW 1-Series F20 Lci M1 Body Kit" },
+// { image: product3, title: "BMW X-Series X6 G06 LCI X6M Body Kit" },
+// { image: product4, title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit" },
+// { image: bmwX6_F16, title: "BMW X-Series X6 F16 X6M Body Kit" },
+// { image: bmwX6_G06, title: "BMW X-Series X6 G06 X6M Body Kit" },
+// { image: mercedesGLC_X253_FL, title: "Mercedes Benz GLC-Class X253 FaceLift GC63 AMG Body Kit" },
+// { image: mercedesGLC_X253, title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit" },
 
 const bodyKitProducts = [{
   image: mercedesC_W206,
@@ -103,12 +109,6 @@ const bodyKitProducts = [{
 }, {
   image: bmw4_G22,
   title: "BMW 4-Series G22 M4 Body Kit"
-}, {
-  image: product3,
-  title: "BMW X-Series X6 G06 LCI X6M Body Kit"
-}, {
-  image: product4,
-  title: "Mercedes Benz GLC-Class X254 GC63 AMG Body Kit"
 }, {
   image: mercedesW176,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
@@ -164,17 +164,6 @@ const bodyKitProducts = [{
   image: bmw5_G30,
   title: "BMW 5-Series G30 M5 Body Kit"
 }, {
-  image: bmwX6_F16,
-  title: "BMW X-Series X6 F16 X6M Body Kit"
-}, {
-  image: bmwX6_G06,
-  title: "BMW X-Series X6 G06 X6M Body Kit"
-}, {
-  image: mercedesGLC_X253_FL,
-  title: "Mercedes Benz GLC-Class X253 FaceLift GC63 AMG Body Kit"
-}, {
-  image: mercedesGLC_X253,
-  title: "Mercedes Benz GLC-Class X253 GC63 AMG Body Kit"
 }, {
   image: mercedesC_W204,
   title: "Mercedes Benz C-Class W204 C63 AMG Body Kit"
