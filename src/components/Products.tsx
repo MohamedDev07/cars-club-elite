@@ -164,7 +164,6 @@ const bodyKitProducts = [{
   image: bmw5_G30,
   title: "BMW 5-Series G30 M5 Body Kit"
 }, {
-}, {
   image: mercedesC_W204,
   title: "Mercedes Benz C-Class W204 C63 AMG Body Kit"
 }, {
