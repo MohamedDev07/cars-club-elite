@@ -77,7 +77,8 @@ import bmwWheels4 from "@/assets/Bmw_Wheels_4.jpg";
 import bmwWheels5 from "@/assets/Bmw_Wheels_5.jpg";
 import bmwWheels6 from "@/assets/Bmw_Wheels_6.jpg";
 import bmwWheels7 from "@/assets/Bmw_Wheels_7.jpg";
-import bmwWheels8 from "@/assets/Bmw_Wheels_8.jpg";
+import bmwWheels8 from "@/assets/Bmw_Wheels_8.png";
+import bmwWheels13 from "@/assets/Bmw_Wheels_13.png";
 import bmwWheels9 from "@/assets/Bmw_Wheels_9.png";
 import bmwWheels10 from "@/assets/Bmw_Wheels_10.png";
 import bmwWheels11 from "@/assets/Bmw_Wheels_11.png";
@@ -268,6 +269,9 @@ const wheelsRimsProducts = [{
 }, {
   image: bmwWheels8,
   title: "Bmw M Wheels 8"
+}, {
+  image: bmwWheels13,
+  title: "Bmw M Wheels 13"
 }, {
   image: bmwWheels9,
   title: "Bmw M Wheels 9"
