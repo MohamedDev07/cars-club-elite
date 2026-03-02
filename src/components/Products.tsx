@@ -334,7 +334,7 @@ const Products = () => {
   };
 
   const handleBrandChange = (brand: string) => {
-    setSelectedBrand(brand);
+    setSelectedBrand(prev => prev === brand ? "All" : brand);
     setCurrentPage(1);
   };
 
@@ -449,11 +449,11 @@ const Products = () => {
 
           {/* Brand filter buttons */}
           <div className="flex flex-wrap justify-center gap-2">
-            {["All", ...brands].map(brand => (
+            {brands.map(brand => (
               <button 
                 key={brand} 
                 onClick={() => handleBrandChange(brand)} 
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedBrand === brand ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedBrand === "All" || selectedBrand === brand ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}
               >
                 {brand}
               </button>
