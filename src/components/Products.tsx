@@ -57,8 +57,6 @@ import gtrHoodM5FendersF10 from "@/assets/Gtr_Hood_M5_Fenders_For_Bmw_F10.jpg";
 import c63HoodFendersW204 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_W204.jpg";
 import c63HoodFendersW205 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_W205.jpg";
 import c63HoodFendersW206 from "@/assets/C63_Hood_C63_Fenders_For_Mercedes_Benz_W206.jpg";
-import csHoodM3FendersG20 from "@/assets/Cs_Hood_M3_Fenders_For_Bmw_G20.jpg";
-import csHoodM3FendersG20Lci from "@/assets/Cs_Hood_M3_Fenders_For_Bmw_G20_Lci.jpg";
 import csHoodM5FendersG30 from "@/assets/Cs_Hood_M5_Fenders_For_Bmw_G30.jpg";
 import csHoodM5FendersG30Lci from "@/assets/Cs_Hood_M5_Fenders_For_Bmw_G30_Lci.jpg";
 import e63HoodFendersW212 from "@/assets/E63_Hood_E63_Fenders_For_Mercedes_Benz_W212.jpg";
@@ -189,9 +187,6 @@ const bodyKitProducts = [{
   image: mercedesE_W213_FL,
   title: "Mercedes Benz E-Class W213 FaceLift E63 AMG Body Kit"
 }, {
-  image: mercedesG_W264,
-  title: "Mercedes Benz G-Class W464 G63 Brabus Body Kit"
-}, {
   image: porsche718,
   title: "Porsche 718 Gt4 Rs Body Kit"
 }, {
@@ -216,12 +211,6 @@ const hoodFenderProducts = [{
 }, {
   image: gtrHoodM5FendersF10,
   title: "Gtr Hood M5 Fenders For Bmw F10"
-}, {
-  image: csHoodM3FendersG20,
-  title: "Cs Hood M3 Fenders For Bmw G20"
-}, {
-  image: csHoodM3FendersG20Lci,
-  title: "Cs Hood M3 Fenders For Bmw G20 Lci"
 }, {
   image: csHoodM5FendersG30,
   title: "Cs Hood M5 Fenders For Bmw G30"
