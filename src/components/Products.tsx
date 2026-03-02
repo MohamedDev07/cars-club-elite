@@ -109,7 +109,7 @@ const bodyKitProducts = [{
   title: "Mercedes Benz C-Class W206 C63 AMG Body Kit"
 }, {
   image: bmw4_G22,
-  title: "BMW 4-Series G22 - G20 M4 Body Kit"
+  title: "BMW 4-Series G22 M4 Body Kit"
 }, {
   image: mercedesW176,
   title: "Mercedes Benz A-Class W176 A45 AMG Body Kit"
@@ -239,7 +239,7 @@ const hoodFenderProducts = [{
   title: "Cs Hood M2 Fenders For Bmw F22 Lci"
 }, {
   image: m3HoodM3FendersG22G20Lci,
-  title: "M3 Hood M3 Fenders For Bmw G22 - G20 Lci"
+  title: "M4 Hood M4 Fenders For Bmw G22"
 }];
 
 const wheelsRimsProducts = [{
