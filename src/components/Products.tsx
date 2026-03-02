@@ -320,7 +320,7 @@ const PRODUCTS_PER_PAGE = 8;
 
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [selectedBrand, setSelectedBrand] = useState<string>("All");
   const [selectedCategory, setSelectedCategory] = useState<string>("Sports Body Kit");
   const [currentPage, setCurrentPage] = useState(1);
   const [isSearching, setIsSearching] = useState(false);
@@ -329,11 +329,12 @@ const Products = () => {
   const handleSidebarSelect = (term: string) => {
     setSearchTerm(term);
     setIsSearching(true);
+    setSelectedBrand("All");
     setCurrentPage(1);
   };
 
-  const toggleBrand = (brand: string) => {
-    setSelectedBrands(prev => prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]);
+  const handleBrandChange = (brand: string) => {
+    setSelectedBrand(brand);
     setCurrentPage(1);
   };
 
@@ -348,6 +349,7 @@ const Products = () => {
     setSearchTerm(value);
     setCurrentPage(1);
     setIsSearching(value.length > 0);
+    if (value.length > 0) setSelectedBrand("All");
   };
 
   // All products combined for search
@@ -367,10 +369,10 @@ const Products = () => {
     const productsToFilter = isSearching ? allProducts : currentProducts;
     return productsToFilter.filter(product => {
       const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesBrand = selectedBrands.length === 0 || selectedBrands.some(brand => product.title.toLowerCase().includes(brand.toLowerCase()));
+      const matchesBrand = selectedBrand === "All" || product.title.toLowerCase().includes(selectedBrand.toLowerCase());
       return matchesSearch && matchesBrand;
     });
-  }, [currentProducts, allProducts, searchTerm, selectedBrands, isSearching]);
+  }, [currentProducts, allProducts, searchTerm, selectedBrand, isSearching]);
 
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   
@@ -447,11 +449,11 @@ const Products = () => {
 
           {/* Brand filter buttons */}
           <div className="flex flex-wrap justify-center gap-2">
-            {brands.map(brand => (
+            {["All", ...brands].map(brand => (
               <button 
                 key={brand} 
-                onClick={() => toggleBrand(brand)} 
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedBrands.includes(brand) ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}
+                onClick={() => handleBrandChange(brand)} 
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedBrand === brand ? "bg-primary text-primary-foreground border-primary" : "bg-card text-foreground border-border hover:border-primary"}`}
               >
                 {brand}
               </button>
