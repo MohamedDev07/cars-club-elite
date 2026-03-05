@@ -52,7 +52,7 @@ import mercedesE_W212 from "@/assets/Mercedes_Benz_E-Class_W212_Pre_FaceLift_E63
 import mercedesE_W212_FL from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213 from "@/assets/Mercedes_Benz_E-Class_W213_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63_AMG_Body_Kit.jpg";
-import mercedesG_W264 from "@/assets/Mercedes_Benz_G-Class_W264_G63_Brabus_Body_Kit.jpg";
+// mercedesG_W264 replaced by mercedesG_W464 above
 import porsche718 from "@/assets/Porsche_718_Gt4_Rs.jpg";
 import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
 
