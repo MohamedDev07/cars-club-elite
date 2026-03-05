@@ -68,7 +68,7 @@ const carBrands: Brand[] = [
       { name: "A4", code: "B9.5", hasBodyKit: true },
       { name: "A5", code: "B9", hasBodyKit: true },
       { name: "A5", code: "B9.5", hasBodyKit: true },
-      { name: "R8", code: "R8", hasBodyKit: true },
+      { name: "R8", code: "", hasBodyKit: true },
     ]
   },
   {
@@ -98,8 +98,8 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel) => {
-    // Search by code only to match across all categories (body kit, hood & fender, wheels)
-    onSelectModel(model.code);
+    const searchTerm = model.code ? model.code : model.name;
+    onSelectModel(searchTerm);
     onClose();
   };
 
