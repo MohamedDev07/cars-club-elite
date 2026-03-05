@@ -17,6 +17,18 @@ interface Brand {
 
 const carBrands: Brand[] = [
   {
+    name: "Audi",
+    models: [
+      { name: "A3", code: "8V.5", hasBodyKit: true },
+      { name: "A3", code: "8Y", hasBodyKit: true },
+      { name: "A4", code: "B9", hasBodyKit: true },
+      { name: "A4", code: "B9.5", hasBodyKit: true },
+      { name: "A5", code: "B9", hasBodyKit: true },
+      { name: "A5", code: "B9.5", hasBodyKit: true },
+      { name: "R8", code: "", hasBodyKit: true },
+    ]
+  },
+  {
     name: "BMW",
     models: [
       { name: "1-Series", code: "E87", hasBodyKit: true },
@@ -29,11 +41,11 @@ const carBrands: Brand[] = [
       { name: "3-Series", code: "G20 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "4-Series", code: "G22", hasBodyKit: true },
       { name: "5-Series", code: "E60", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
-      { name: "6-Series", code: "F12", hasBodyKit: true },
-      { name: "8-Series", code: "G15", hasBodyKit: true },
       { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "5-Series", code: "G30 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
+      { name: "6-Series", code: "F12", hasBodyKit: true },
+      { name: "8-Series", code: "G15", hasBodyKit: true },
       // Hidden: { name: "X6", code: "F16", hasBodyKit: true },
       // Hidden: { name: "X6", code: "G06", hasBodyKit: true },
       // Hidden: { name: "X6", code: "G06 LCI", hasBodyKit: true },
@@ -57,18 +69,6 @@ const carBrands: Brand[] = [
       // Hidden: { name: "GLC-Class", code: "X253", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X254", hasBodyKit: true },
-    ]
-  },
-  {
-    name: "Audi",
-    models: [
-      { name: "A3", code: "8V.5", hasBodyKit: true },
-      { name: "A3", code: "8Y", hasBodyKit: true },
-      { name: "A4", code: "B9", hasBodyKit: true },
-      { name: "A4", code: "B9.5", hasBodyKit: true },
-      { name: "A5", code: "B9", hasBodyKit: true },
-      { name: "A5", code: "B9.5", hasBodyKit: true },
-      { name: "R8", code: "", hasBodyKit: true },
     ]
   },
   {
