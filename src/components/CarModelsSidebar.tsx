@@ -29,6 +29,8 @@ const carBrands: Brand[] = [
       { name: "3-Series", code: "G20 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "4-Series", code: "G22", hasBodyKit: true },
       { name: "5-Series", code: "E60", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
+      { name: "6-Series", code: "F12", hasBodyKit: true },
+      { name: "8-Series", code: "G15", hasBodyKit: true },
       { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "5-Series", code: "G30 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
@@ -66,6 +68,7 @@ const carBrands: Brand[] = [
       { name: "A4", code: "B9.5", hasBodyKit: true },
       { name: "A5", code: "B9", hasBodyKit: true },
       { name: "A5", code: "B9.5", hasBodyKit: true },
+      { name: "R8", code: "", hasBodyKit: true },
     ]
   },
   {

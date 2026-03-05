@@ -34,6 +34,10 @@ import bmw5_E60 from "@/assets/BMW_5-Series_E60_M5_Body_Kit.jpg";
 import bmw5_F10 from "@/assets/BMW_5-Series_F10_M5_Body_Kit.jpg";
 import bmw5_G30_Lci from "@/assets/BMW_5-Series_G30_Lci_M5_Body_Kit.jpg";
 import bmw5_G30 from "@/assets/BMW_5-Series_G30_M5_Body_Kit.jpg";
+import bmw6_F12 from "@/assets/BMW_6-Series_F12_M6_Body_Kit.jpg";
+import bmw8_G15 from "@/assets/BMW_8-Series_G15_M8_Body_Kit.jpg";
+import mercedesG_W464 from "@/assets/Mercedes_Benz_G-Class_W464_G63_Brabus_Body_Kit.jpg";
+import audiR8 from "@/assets/Audi_R8_Rs_Body_Kit.jpg";
 
 import bmwX6_F16 from "@/assets/BMW_X-Series_X6_F16_X6M_Body_Kit.jpg";
 import bmwX6_G06 from "@/assets/BMW_X-Series_X6_G06_X6M_Body_Kit.jpg";
@@ -48,7 +52,7 @@ import mercedesE_W212 from "@/assets/Mercedes_Benz_E-Class_W212_Pre_FaceLift_E63
 import mercedesE_W212_FL from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213 from "@/assets/Mercedes_Benz_E-Class_W213_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63_AMG_Body_Kit.jpg";
-import mercedesG_W264 from "@/assets/Mercedes_Benz_G-Class_W264_G63_Brabus_Body_Kit.jpg";
+// mercedesG_W264 replaced by mercedesG_W464 above
 import porsche718 from "@/assets/Porsche_718_Gt4_Rs.jpg";
 import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
 
@@ -194,6 +198,18 @@ const bodyKitProducts = [{
 }, {
   image: porsche981,
   title: "Porsche 981 Gt4 Rs Body Kit"
+}, {
+  image: bmw6_F12,
+  title: "BMW 6-Series F12 M6 Body Kit"
+}, {
+  image: bmw8_G15,
+  title: "BMW 8-Series G15 M8 Body Kit"
+}, {
+  image: mercedesG_W464,
+  title: "Mercedes Benz G-Class W464 G63 Brabus Body Kit"
+}, {
+  image: audiR8,
+  title: "Audi R8 Rs Body Kit"
 }];
 const hoodFenderProducts = [{
   image: m3HoodM3FendersE90,
