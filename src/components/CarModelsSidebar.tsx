@@ -98,8 +98,8 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel) => {
-    // Search by code only to match across all categories (body kit, hood & fender, wheels)
-    onSelectModel(model.code);
+    const searchTerm = model.code ? model.code : model.name;
+    onSelectModel(searchTerm);
     onClose();
   };
 
