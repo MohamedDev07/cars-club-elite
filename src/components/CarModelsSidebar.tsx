@@ -68,7 +68,7 @@ const carBrands: Brand[] = [
       { name: "A4", code: "B9.5", hasBodyKit: true },
       { name: "A5", code: "B9", hasBodyKit: true },
       { name: "A5", code: "B9.5", hasBodyKit: true },
-      { name: "R8", code: "", hasBodyKit: true },
+      { name: "R8", code: "R8", hasBodyKit: true },
     ]
   },
   {
