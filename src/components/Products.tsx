@@ -30,6 +30,8 @@ import bmw1_F20_Lci from "@/assets/BMW_1-Series_F20_Lci_M1_Body_Kit.jpg";
 import bmw1_E87 from "@/assets/BMW_1-Series_E87_1M_Body_Kit.jpg";
 import bmw3_G20 from "@/assets/BMW_3-Series_G20_M3_Body_Kit.jpg";
 import bmw4_G22 from "@/assets/BMW_4-Series_G22_M4_Body_Kit.jpg";
+import bmw4_F32 from "@/assets/BMW_4-Series_F32_M4_Body_Kit.jpg";
+import bmw3_E92 from "@/assets/BMW_3-Series_E92_M3_Body_Kit.jpg";
 import bmw5_E60 from "@/assets/BMW_5-Series_E60_M5_Body_Kit.jpg";
 import bmw5_F10 from "@/assets/BMW_5-Series_F10_M5_Body_Kit.jpg";
 import bmw5_G30_Lci from "@/assets/BMW_5-Series_G30_Lci_M5_Body_Kit.jpg";
@@ -153,6 +155,12 @@ const bodyKitProducts = [{
 }, {
   image: mercedesW177,
   title: "Mercedes Benz A-Class W177 A45 AMG Body Kit"
+}, {
+  image: bmw3_E92,
+  title: "BMW 3-Series E92 M3 Body Kit"
+}, {
+  image: bmw4_F32,
+  title: "BMW 4-Series F32 M4 Body Kit"
 }, {
   image: bmw3_G20,
   title: "BMW 3-Series G20 M3 Body Kit"

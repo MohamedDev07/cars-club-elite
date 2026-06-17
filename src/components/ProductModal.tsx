@@ -1,4 +1,4 @@
-import { X, Check } from "lucide-react";
+import { X, Check, Zap } from "lucide-react";
 import { useEffect } from "react";
 
 interface ProductModalProps {
@@ -69,6 +69,10 @@ const ProductModal = ({
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
               <span>Shipping All Egypt</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="h-4 w-4 text-primary" />
+              <span>One Day Delivery</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
