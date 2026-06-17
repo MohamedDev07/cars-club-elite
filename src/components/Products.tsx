@@ -166,6 +166,9 @@ const bodyKitProducts = [{
   image: bmw3_G20,
   title: "BMW 3-Series G20 M3 Body Kit"
 }, {
+  image: bmw3_G20_PreLci,
+  title: "BMW 3-Series G20 Pre-Lci M3 Body Kit"
+}, {
   image: bmw5_E60,
   title: "BMW 5-Series E60 M5 Body Kit"
 }, {
