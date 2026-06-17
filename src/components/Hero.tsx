@@ -1,4 +1,4 @@
-import { ChevronDown, Truck, CreditCard, Store } from "lucide-react";
+import { ChevronDown, Truck, CreditCard, Store, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
