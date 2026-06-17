@@ -1,4 +1,4 @@
-import { ChevronDown, Truck, CreditCard, Store } from "lucide-react";
+import { ChevronDown, Truck, CreditCard, Store, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -52,6 +52,10 @@ const Hero = () => {
           <div className="flex items-center gap-2 text-foreground/80">
             <Truck className="h-5 w-5 text-primary" />
             <span className="text-sm">Shipping All Egypt</span>
+          </div>
+          <div className="flex items-center gap-2 text-foreground/80">
+            <Zap className="h-5 w-5 text-primary" />
+            <span className="text-sm">One Day Delivery</span>
           </div>
           <div className="flex items-center gap-2 text-foreground/80">
             <CreditCard className="h-5 w-5 text-primary" />
