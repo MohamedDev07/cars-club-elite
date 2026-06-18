@@ -268,6 +268,9 @@ const hoodFenderProducts = [{
 }, {
   image: m3HoodM3FendersG22G20Lci,
   title: "M4 Hood M4 Fenders For Bmw G22"
+}, {
+  image: m3HoodM3FendersG22G20Lci,
+  title: "M3 Hood M3 Fenders For Bmw G20"
 }];
 
 const wheelsRimsProducts = [{
