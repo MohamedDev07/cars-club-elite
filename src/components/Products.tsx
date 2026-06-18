@@ -75,6 +75,8 @@ import m3HoodM3FendersE90 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E90.jpg";
 import gtsHoodM3FendersF30 from "@/assets/Gts_Hood_M3_Fenders_For_Bmw_F30.jpg";
 import csHoodM2FendersG20Lci from "@/assets/Cs_Hood_M2_Fenders_For_Bmw_G20_Lci.jpg";
 import m3HoodM3FendersG22G20Lci from "@/assets/M3_Hood_M3_Fenders_For_Bmw_G22_G20_Lci.jpg";
+import m3HoodM3FendersE92 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E92.jpg";
+import gtsHoodM4FendersF32 from "@/assets/Gts_Hood_M4_Fenders_For_Bmw_F32.jpg";
 
 // Wheels Rims imports
 import bmwWheels1 from "@/assets/Bmw_Wheels_1.jpg";
@@ -227,8 +229,14 @@ const hoodFenderProducts = [{
   image: m3HoodM3FendersE90,
   title: "M3 Hood M3 Fenders For Bmw E90"
 }, {
+  image: m3HoodM3FendersE92,
+  title: "M3 Hood M3 Fenders For Bmw E92"
+}, {
   image: gtsHoodM3FendersF30,
   title: "Gts Hood M3 Fenders For Bmw F30"
+}, {
+  image: gtsHoodM4FendersF32,
+  title: "Gts Hood M4 Fenders For Bmw F32"
 }, {
   image: c63HoodFendersW205,
   title: "C63 Hood C63 Fenders For Mercedes Benz W205"
