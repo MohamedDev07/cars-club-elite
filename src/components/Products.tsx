@@ -164,7 +164,7 @@ const bodyKitProducts = [{
   title: "BMW 4-Series F32 M4 Body Kit"
 }, {
   image: bmw3_G20,
-  title: "BMW 3-Series G20 M3 Body Kit"
+  title: "BMW 3-Series G20 Pre Fc M3 Body Kit"
 }, {
   image: bmw3_G20_PreLci,
   title: "BMW 3-Series G20 Pre-Lci M3 Body Kit"
