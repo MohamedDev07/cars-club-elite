@@ -130,6 +130,7 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
           <button 
             onClick={onClose}
             className="p-2 hover:bg-muted rounded-lg transition-colors"
+            aria-label="Close menu"
           >
             <X className="h-5 w-5 text-muted-foreground" />
           </button>
