@@ -103,6 +103,11 @@ import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
 import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
 import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
 
+// Performance Parts imports
+import perfSuspension from "@/assets/Performance_Parts_Suspension_System.jpg";
+import perfColdAirIntake from "@/assets/Performance_Parts_Cold_Air_Intake_Kit.jpg";
+import perfExhaust from "@/assets/Performance_Parts_Exhaust_System.jpg";
+
 // Hidden products (kept in data for future use):
 // { image: product2, title: "BMW 1-Series F20 M1 Body Kit" },
 // { image: bmw1_F20_Lci, title: "BMW 1-Series F20 Lci M1 Body Kit" },
@@ -352,8 +357,19 @@ const wheelsRimsProducts = [{
   title: "Audi Rs Wheels 4"
 }];
 
+const performancePartsProducts = [{
+  image: perfSuspension,
+  title: "Performance Parts - Suspension System"
+}, {
+  image: perfColdAirIntake,
+  title: "Performance Parts - Cold Air Intake Kit"
+}, {
+  image: perfExhaust,
+  title: "Performance Parts - Exhaust System"
+}];
+
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
-const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims"] as const;
+const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims", "Performance Parts"] as const;
 
 const PRODUCTS_PER_PAGE = 8;
 
@@ -395,14 +411,17 @@ const Products = () => {
   const allProducts = useMemo(() => [
     ...bodyKitProducts.map(p => ({ ...p, category: "Sports Body Kit" })),
     ...hoodFenderProducts.map(p => ({ ...p, category: "Sports Hood & Sports Fender" })),
-    ...wheelsRimsProducts.map(p => ({ ...p, category: "Sports Wheels Rims" }))
+    ...wheelsRimsProducts.map(p => ({ ...p, category: "Sports Wheels Rims" })),
+    ...performancePartsProducts.map(p => ({ ...p, category: "Performance Parts" }))
   ], []);
 
   const currentProducts = selectedCategory === "Sports Body Kit" 
     ? bodyKitProducts 
     : selectedCategory === "Sports Hood & Sports Fender" 
       ? hoodFenderProducts 
-      : wheelsRimsProducts;
+      : selectedCategory === "Sports Wheels Rims"
+        ? wheelsRimsProducts
+        : performancePartsProducts;
 
   const filteredProducts = useMemo(() => {
     const productsToFilter = isSearching ? allProducts : currentProducts;
