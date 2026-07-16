@@ -411,14 +411,17 @@ const Products = () => {
   const allProducts = useMemo(() => [
     ...bodyKitProducts.map(p => ({ ...p, category: "Sports Body Kit" })),
     ...hoodFenderProducts.map(p => ({ ...p, category: "Sports Hood & Sports Fender" })),
-    ...wheelsRimsProducts.map(p => ({ ...p, category: "Sports Wheels Rims" }))
+    ...wheelsRimsProducts.map(p => ({ ...p, category: "Sports Wheels Rims" })),
+    ...performancePartsProducts.map(p => ({ ...p, category: "Performance Parts" }))
   ], []);
 
   const currentProducts = selectedCategory === "Sports Body Kit" 
     ? bodyKitProducts 
     : selectedCategory === "Sports Hood & Sports Fender" 
       ? hoodFenderProducts 
-      : wheelsRimsProducts;
+      : selectedCategory === "Sports Wheels Rims"
+        ? wheelsRimsProducts
+        : performancePartsProducts;
 
   const filteredProducts = useMemo(() => {
     const productsToFilter = isSearching ? allProducts : currentProducts;
