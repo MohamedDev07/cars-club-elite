@@ -103,6 +103,11 @@ import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
 import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
 import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
 
+// Performance Parts imports
+import perfSuspension from "@/assets/Performance_Parts_Suspension_System.jpg";
+import perfColdAirIntake from "@/assets/Performance_Parts_Cold_Air_Intake_Kit.jpg";
+import perfExhaust from "@/assets/Performance_Parts_Exhaust_System.jpg";
+
 // Hidden products (kept in data for future use):
 // { image: product2, title: "BMW 1-Series F20 M1 Body Kit" },
 // { image: bmw1_F20_Lci, title: "BMW 1-Series F20 Lci M1 Body Kit" },
