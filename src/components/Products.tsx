@@ -481,6 +481,7 @@ const Products = () => {
               onClick={() => setIsSidebarOpen(true)}
               className="p-3 bg-card border border-border rounded-lg hover:border-primary transition-colors"
               title="Browse Car Models"
+              aria-label="Toggle car models"
             >
               <List className="h-5 w-5 text-primary" />
             </button>

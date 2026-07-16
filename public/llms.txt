@@ -1,0 +1,11 @@
+# Cars Club Egypt
+
+> Sports car tuning parts and body kits for Bmw, Mercedes, Audi, and Porsche. Online store based in Cairo, shipping across Egypt with cash on delivery.
+
+Cars Club sells body kits, hoods, fenders, wheels, and performance parts for European sports cars. Orders are placed via WhatsApp; delivery covers all of Egypt with cash on delivery available.
+
+## Pages
+
+- [Home](/): Landing page with brand overview and features.
+- [Products](/#products): Body kits, hood & fender sets, wheels, and performance parts, filterable by car model.
+- [Contact](/#contact): WhatsApp and contact details for placing orders.
