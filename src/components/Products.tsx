@@ -357,8 +357,19 @@ const wheelsRimsProducts = [{
   title: "Audi Rs Wheels 4"
 }];
 
+const performancePartsProducts = [{
+  image: perfSuspension,
+  title: "Performance Parts - Suspension System"
+}, {
+  image: perfColdAirIntake,
+  title: "Performance Parts - Cold Air Intake Kit"
+}, {
+  image: perfExhaust,
+  title: "Performance Parts - Exhaust System"
+}];
+
 const brands = ["BMW", "Mercedes", "Audi", "Porsche"] as const;
-const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims"] as const;
+const categories = ["Sports Body Kit", "Sports Hood & Sports Fender", "Sports Wheels Rims", "Performance Parts"] as const;
 
 const PRODUCTS_PER_PAGE = 8;
 
