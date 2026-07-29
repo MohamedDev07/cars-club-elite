@@ -215,8 +215,11 @@ const bodyKitProducts = [{
   image: mercedesE_W213_FL,
   title: "Mercedes Benz E-Class W213 FaceLift E63 AMG Body Kit"
 }, {
-  image: porsche718,
-  title: "Porsche 718 Gt4 Rs Body Kit"
+  image: porsche718Gt4,
+  title: "Porsche 718 Gt4 Body Kit"
+}, {
+  image: porsche911Gt3,
+  title: "Porsche 911 Gt3 Body Kit"
 }, {
   image: porsche981,
   title: "Porsche 981 Gt4 Rs Body Kit"
@@ -226,6 +229,12 @@ const bodyKitProducts = [{
 }, {
   image: bmw8_G15,
   title: "BMW 8-Series G15 M8 Body Kit"
+}, {
+  image: bmw5_G60_Lci,
+  title: "BMW 5-Series G60 Lci M5 Body Kit"
+}, {
+  image: mercedesE_W214,
+  title: "Mercedes Benz E-Class W214 E63 AMG Body Kit"
 }, {
   image: mercedesG_W464,
   title: "Mercedes Benz G-Class W464 G63 Brabus Body Kit"
