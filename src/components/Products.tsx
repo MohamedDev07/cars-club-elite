@@ -60,7 +60,7 @@ import porsche718Gt4 from "@/assets/Porsche_718_Gt4_Body_Kit.jpg";
 import porsche911Gt3 from "@/assets/Porsche_911_Gt3_Body_Kit.jpg";
 import bmw5_G60_Lci from "@/assets/BMW_5-Series_G60_Lci_M5_Body_Kit.jpg";
 import mercedesE_W214 from "@/assets/Mercedes_Benz_E-Class_W214_E63_AMG_Body_Kit.jpg";
-import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
+
 
 // Hood & Fender imports
 import gtrHoodM5FendersF10 from "@/assets/Gtr_Hood_M5_Fenders_For_Bmw_F10.jpg";
@@ -221,9 +221,7 @@ const bodyKitProducts = [{
   image: porsche911Gt3,
   title: "Porsche 911 Gt3 Body Kit"
 }, {
-  image: porsche981,
-  title: "Porsche 981 Gt4 Rs Body Kit"
-}, {
+
   image: bmw6_F12,
   title: "BMW 6-Series F12 M6 Body Kit"
 }, {
@@ -231,7 +229,7 @@ const bodyKitProducts = [{
   title: "BMW 8-Series G15 M8 Body Kit"
 }, {
   image: bmw5_G60_Lci,
-  title: "BMW 5-Series G60 Lci M5 Body Kit"
+  title: "BMW 5-Series G60 M5 Body Kit"
 }, {
   image: mercedesE_W214,
   title: "Mercedes Benz E-Class W214 E63 AMG Body Kit"
