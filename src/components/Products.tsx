@@ -56,7 +56,10 @@ import mercedesE_W212_FL from "@/assets/Mercedes_Benz_E-Class_W212_E63_AMG_Body_
 import mercedesE_W213 from "@/assets/Mercedes_Benz_E-Class_W213_E63_AMG_Body_Kit.jpg";
 import mercedesE_W213_FL from "@/assets/Mercedes_Benz_E-Class_W213_Face_Lift_E63_AMG_Body_Kit.jpg";
 // mercedesG_W264 replaced by mercedesG_W464 above
-import porsche718 from "@/assets/Porsche_718_Gt4_Rs.jpg";
+import porsche718Gt4 from "@/assets/Porsche_718_Gt4_Body_Kit.jpg";
+import porsche911Gt3 from "@/assets/Porsche_911_Gt3_Body_Kit.jpg";
+import bmw5_G60_Lci from "@/assets/BMW_5-Series_G60_Lci_M5_Body_Kit.jpg";
+import mercedesE_W214 from "@/assets/Mercedes_Benz_E-Class_W214_E63_AMG_Body_Kit.jpg";
 import porsche981 from "@/assets/Porsche_981_Gt4_Rs.jpg";
 
 // Hood & Fender imports
