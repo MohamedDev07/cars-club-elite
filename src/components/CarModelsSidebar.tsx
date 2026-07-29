@@ -45,6 +45,7 @@ const carBrands: Brand[] = [
       { name: "5-Series", code: "E60", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "F10", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "GTR" },
       { name: "5-Series", code: "G30", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
+      { name: "5-Series", code: "G60 Lci", hasBodyKit: true },
       // Hidden: { name: "5-Series", code: "G30 Lci", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "CS" },
       { name: "6-Series", code: "F12", hasBodyKit: true },
       { name: "8-Series", code: "G15", hasBodyKit: true },
@@ -67,6 +68,7 @@ const carBrands: Brand[] = [
       // Hidden: { name: "E-Class", code: "W212 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W213", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       // Hidden: { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
+      { name: "E-Class", code: "W214", hasBodyKit: true },
       { name: "G-Class", code: "W464", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X253", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
@@ -76,7 +78,8 @@ const carBrands: Brand[] = [
   {
     name: "Porsche",
     models: [
-      { name: "718", code: "GT4 RS", hasBodyKit: true },
+      { name: "718", code: "GT4", hasBodyKit: true },
+      { name: "911", code: "GT3", hasBodyKit: true },
       { name: "981", code: "GT4 RS", hasBodyKit: true },
     ]
   }
