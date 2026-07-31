@@ -330,9 +330,6 @@ const wheelsRimsProducts = [{
   image: bmwWheels8,
   title: "Bmw M Wheels 8"
 }, {
-  image: bmwWheels13,
-  title: "Bmw M Wheels 13"
-}, {
   image: bmwWheels9,
   title: "Bmw M Wheels 9"
 }, {
@@ -344,6 +341,9 @@ const wheelsRimsProducts = [{
 }, {
   image: bmwWheels12,
   title: "Bmw M Wheels 12"
+}, {
+  image: bmwWheels13,
+  title: "Bmw M Wheels 13"
 }, {
   image: bmwWheels14,
   title: "Bmw M Wheels 14"
