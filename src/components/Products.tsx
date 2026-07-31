@@ -306,8 +306,8 @@ const hoodFenderProducts = [{
 }];
 
 const wheelsRimsProducts = [{
-  image: bmwWheels1,
-  title: "Bmw M Wheels 1"
+  image: bmwWheels21,
+  title: "Bmw M Wheels 21"
 }, {
   image: bmwWheels2,
   title: "Bmw M Wheels 2"
