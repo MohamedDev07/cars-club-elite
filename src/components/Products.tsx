@@ -95,6 +95,13 @@ import bmwWheels9 from "@/assets/Bmw_Wheels_9.png";
 import bmwWheels10 from "@/assets/Bmw_Wheels_10.png";
 import bmwWheels11 from "@/assets/Bmw_Wheels_11.png";
 import bmwWheels12 from "@/assets/Bmw_Wheels_12.png";
+import bmwWheels14 from "@/assets/Bmw_Wheels_14.jpg";
+import bmwWheels15 from "@/assets/Bmw_Wheels_15.jpg";
+import bmwWheels16 from "@/assets/Bmw_Wheels_16.jpg";
+import bmwWheels17 from "@/assets/Bmw_Wheels_17.jpg";
+import bmwWheels18 from "@/assets/Bmw_Wheels_18.jpg";
+import bmwWheels19 from "@/assets/Bmw_Wheels_19.jpg";
+import bmwWheels20 from "@/assets/Bmw_Wheels_20.jpg";
 import mercedesWheels1 from "@/assets/Mercedes_Wheels_1.png";
 import mercedesWheels2 from "@/assets/Mercedes_Wheels_2.jpg";
 import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
@@ -337,6 +344,27 @@ const wheelsRimsProducts = [{
 }, {
   image: bmwWheels12,
   title: "Bmw M Wheels 12"
+}, {
+  image: bmwWheels14,
+  title: "Bmw M Wheels 14"
+}, {
+  image: bmwWheels15,
+  title: "Bmw M Wheels 15"
+}, {
+  image: bmwWheels16,
+  title: "Bmw M Wheels 16"
+}, {
+  image: bmwWheels17,
+  title: "Bmw M Wheels 17"
+}, {
+  image: bmwWheels18,
+  title: "Bmw M Wheels 18"
+}, {
+  image: bmwWheels19,
+  title: "Bmw M Wheels 19"
+}, {
+  image: bmwWheels20,
+  title: "Bmw M Wheels 20"
 }, {
   image: mercedesWheels1,
   title: "Mercedes Benz AMG Wheels 1"
