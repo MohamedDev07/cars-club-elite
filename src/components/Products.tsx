@@ -82,7 +82,7 @@ import m3HoodM3FendersE92 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E92.jpg";
 import gtsHoodM4FendersF32 from "@/assets/Gts_Hood_M4_Fenders_For_Bmw_F32.jpg";
 
 // Wheels Rims imports
-import bmwWheels1 from "@/assets/Bmw_Wheels_1.jpg";
+import bmwWheels21 from "@/assets/Bmw_Wheels_21.jpg";
 import bmwWheels2 from "@/assets/Bmw_Wheels_2.jpg";
 import bmwWheels3 from "@/assets/Bmw_Wheels_3.jpg";
 import bmwWheels4 from "@/assets/Bmw_Wheels_4.jpg";
@@ -306,8 +306,8 @@ const hoodFenderProducts = [{
 }];
 
 const wheelsRimsProducts = [{
-  image: bmwWheels1,
-  title: "Bmw M Wheels 1"
+  image: bmwWheels21,
+  title: "Bmw M Wheels 21"
 }, {
   image: bmwWheels2,
   title: "Bmw M Wheels 2"
