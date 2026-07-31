@@ -101,6 +101,8 @@ import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
 import mercedesWheels4 from "@/assets/Mercedes_Wheels_4.jpg";
 import mercedesWheels5 from "@/assets/Mercedes_Wheels_5.jpg";
 import mercedesWheels6 from "@/assets/Mercedes_Wheels_6.jpg";
+import mercedesWheels7 from "@/assets/Mercedes_Wheels_7.webp";
+import mercedesWheels8 from "@/assets/Mercedes_Wheels_8.webp";
 import audiWheels1 from "@/assets/Audi_Wheels_1.jpg";
 import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
 import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
@@ -353,6 +355,12 @@ const wheelsRimsProducts = [{
 }, {
   image: mercedesWheels6,
   title: "Mercedes Benz Brabus Wheels 6"
+}, {
+  image: mercedesWheels7,
+  title: "Mercedes Benz AMG Wheels 7"
+}, {
+  image: mercedesWheels8,
+  title: "Mercedes Benz AMG Wheels 8"
 }, {
   image: audiWheels1,
   title: "Audi Rs Wheels 1"
