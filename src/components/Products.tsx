@@ -107,6 +107,13 @@ import mercedesWheels2 from "@/assets/Mercedes_Wheels_2.jpg";
 import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
 import mercedesWheels4 from "@/assets/Mercedes_Wheels_4.jpg";
 import mercedesWheels5 from "@/assets/Mercedes_Wheels_5.jpg";
+import mercedesWheels6 from "@/assets/Mercedes_Benz_AMG_Wheels_6.jpg";
+import mercedesWheels7 from "@/assets/Mercedes_Benz_AMG_Wheels_7.jpg";
+import mercedesWheels8 from "@/assets/Mercedes_Benz_AMG_Wheels_8.jpg";
+import mercedesWheels9 from "@/assets/Mercedes_Benz_AMG_Wheels_9.webp";
+import mercedesWheels10 from "@/assets/Mercedes_Benz_AMG_Wheels_10.jpg";
+import mercedesBrabusWheels11 from "@/assets/Mercedes_Benz_Brabus_Wheels_11.webp";
+import mercedesMaybachWheels12 from "@/assets/Mercedes_Benz_Maybach_Wheels_12.webp";
 import audiWheels1 from "@/assets/Audi_Wheels_1.jpg";
 import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
 import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
@@ -377,6 +384,27 @@ const wheelsRimsProducts = [{
 }, {
   image: mercedesWheels5,
   title: "Mercedes Benz AMG Wheels 5"
+}, {
+  image: mercedesWheels6,
+  title: "Mercedes Benz AMG Wheels 6"
+}, {
+  image: mercedesWheels7,
+  title: "Mercedes Benz AMG Wheels 7"
+}, {
+  image: mercedesWheels8,
+  title: "Mercedes Benz AMG Wheels 8"
+}, {
+  image: mercedesWheels9,
+  title: "Mercedes Benz AMG Wheels 9"
+}, {
+  image: mercedesWheels10,
+  title: "Mercedes Benz AMG Wheels 10"
+}, {
+  image: mercedesBrabusWheels11,
+  title: "Mercedes Benz Brabus Wheels 11"
+}, {
+  image: mercedesMaybachWheels12,
+  title: "Mercedes Benz Maybach Wheels 12"
 }, {
   image: audiWheels1,
   title: "Audi Rs Wheels 1"
