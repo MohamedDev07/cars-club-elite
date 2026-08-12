@@ -385,6 +385,27 @@ const wheelsRimsProducts = [{
   image: mercedesWheels5,
   title: "Mercedes Benz AMG Wheels 5"
 }, {
+  image: mercedesWheels6,
+  title: "Mercedes Benz AMG Wheels 6"
+}, {
+  image: mercedesWheels7,
+  title: "Mercedes Benz AMG Wheels 7"
+}, {
+  image: mercedesWheels8,
+  title: "Mercedes Benz AMG Wheels 8"
+}, {
+  image: mercedesWheels9,
+  title: "Mercedes Benz AMG Wheels 9"
+}, {
+  image: mercedesWheels10,
+  title: "Mercedes Benz AMG Wheels 10"
+}, {
+  image: mercedesBrabusWheels11,
+  title: "Mercedes Benz Brabus Wheels 11"
+}, {
+  image: mercedesMaybachWheels12,
+  title: "Mercedes Benz Maybach Wheels 12"
+}, {
   image: audiWheels1,
   title: "Audi Rs Wheels 1"
 }, {
