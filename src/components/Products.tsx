@@ -373,12 +373,20 @@ const Products = () => {
 
   const filteredProducts = useMemo(() => {
     const productsToFilter = isSearching ? allProducts : currentProducts;
+    // Token-based matching: every whitespace-separated token in the search
+    // term must appear as an exact (case-insensitive) token in the product
+    // title. This prevents "B9" from matching "B9.5", "G20" from matching
+    // "G20 Lci", etc. — each model only matches its own products.
+    const searchTokens = searchTerm.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return productsToFilter.filter(product => {
       const brandKeyword = sidebarBrand.toLowerCase().replace(" benz", "");
       const isBrandWheel = !!sidebarBrand
         && (product as { category?: string }).category === "Sports Wheels Rims"
         && product.title.toLowerCase().includes(brandKeyword);
-      const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) || isBrandWheel;
+      const titleTokens = product.title.toLowerCase().split(/\s+/);
+      const matchesSearch = searchTokens.length === 0
+        || searchTokens.every(token => titleTokens.includes(token))
+        || isBrandWheel;
       const matchesBrand = selectedBrand === "All" || product.title.toLowerCase().includes(selectedBrand.toLowerCase());
       return matchesSearch && matchesBrand;
     });
