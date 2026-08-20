@@ -88,7 +88,7 @@ const carBrands: Brand[] = [
 interface CarModelsSidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  onSelectModel: (searchTerm: string) => void;
+  onSelectModel: (searchTerm: string, brand?: string) => void;
 }
 
 const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarProps) => {
@@ -102,9 +102,9 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
     );
   };
 
-  const handleModelClick = (model: CarModel) => {
+  const handleModelClick = (model: CarModel, brandName: string) => {
     const searchTerm = model.code ? model.code : model.name;
-    onSelectModel(searchTerm);
+    onSelectModel(searchTerm, brandName);
     onClose();
   };
 
@@ -162,7 +162,7 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
                   {brand.models.map((model) => (
                     <button
                       key={`${model.name}-${model.code}`}
-                      onClick={() => handleModelClick(model)}
+                      onClick={() => handleModelClick(model, brand.name)}
                       className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/30 rounded-lg transition-colors"
                     >
                       {model.name} {model.code}
