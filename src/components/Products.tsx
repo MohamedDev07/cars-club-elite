@@ -82,42 +82,13 @@ import m3HoodM3FendersE92 from "@/assets/M3_Hood_M3_Fenders_For_Bmw_E92.jpg";
 import gtsHoodM4FendersF32 from "@/assets/Gts_Hood_M4_Fenders_For_Bmw_F32.jpg";
 
 // Wheels Rims imports
-import bmwWheels21 from "@/assets/Bmw_Wheels_21.jpg";
-import bmwWheels2 from "@/assets/Bmw_Wheels_2.jpg";
-import bmwWheels3 from "@/assets/Bmw_Wheels_3.jpg";
-import bmwWheels4 from "@/assets/Bmw_Wheels_4.jpg";
-import bmwWheels5 from "@/assets/Bmw_Wheels_5.jpg";
-import bmwWheels6 from "@/assets/Bmw_Wheels_6.jpg";
-import bmwWheels7 from "@/assets/Bmw_Wheels_7.jpg";
-import bmwWheels8 from "@/assets/Bmw_Wheels_8.png";
-import bmwWheels13 from "@/assets/Bmw_Wheels_13.png";
-import bmwWheels9 from "@/assets/Bmw_Wheels_9.png";
-import bmwWheels10 from "@/assets/Bmw_Wheels_10.png";
-import bmwWheels11 from "@/assets/Bmw_Wheels_11.png";
-import bmwWheels12 from "@/assets/Bmw_Wheels_12.png";
-import bmwWheels14 from "@/assets/Bmw_Wheels_14.jpg";
-import bmwWheels15 from "@/assets/Bmw_Wheels_15.jpg";
-import bmwWheels16 from "@/assets/Bmw_Wheels_16.jpg";
-import bmwWheels17 from "@/assets/Bmw_Wheels_17.jpg";
-import bmwWheels18 from "@/assets/Bmw_Wheels_18.jpg";
-import bmwWheels19 from "@/assets/Bmw_Wheels_19.jpg";
-import bmwWheels20 from "@/assets/Bmw_Wheels_20.jpg";
-import mercedesWheels1 from "@/assets/Mercedes_Wheels_1.png";
-import mercedesWheels2 from "@/assets/Mercedes_Wheels_2.jpg";
-import mercedesWheels3 from "@/assets/Mercedes_Wheels_3.jpg";
-import mercedesWheels4 from "@/assets/Mercedes_Wheels_4.jpg";
-import mercedesWheels5 from "@/assets/Mercedes_Wheels_5.jpg";
-import mercedesWheels6 from "@/assets/Mercedes_Benz_AMG_Wheels_6.jpg";
-import mercedesWheels7 from "@/assets/Mercedes_Benz_AMG_Wheels_7.jpg";
-import mercedesWheels8 from "@/assets/Mercedes_Benz_AMG_Wheels_8.jpg";
-import mercedesWheels9 from "@/assets/Mercedes_Benz_AMG_Wheels_9.webp";
-import mercedesWheels10 from "@/assets/Mercedes_Benz_AMG_Wheels_10.jpg";
-import mercedesBrabusWheels11 from "@/assets/Mercedes_Benz_Brabus_Wheels_11.webp";
-import mercedesMaybachWheels12 from "@/assets/Mercedes_Benz_Maybach_Wheels_12.webp";
-import audiWheels1 from "@/assets/Audi_Wheels_1.jpg";
-import audiWheels2 from "@/assets/Audi_Wheels_2.jpg";
-import audiWheels3 from "@/assets/Audi_Wheels_3.jpg";
-import audiWheels4 from "@/assets/Audi_Wheels_4.jpg";
+import bmwMWheels1 from "@/assets/Bmw_M_Wheels_1.jpg";
+import bmwMWheels2 from "@/assets/Bmw_M_Wheels_2.jpg";
+import bmwMWheels3 from "@/assets/Bmw_M_Wheels_3.jpg";
+import bmwMWheels4 from "@/assets/Bmw_M_Wheels_4.jpg";
+import mercedesAmgWheels from "@/assets/Mercedes_Benz_AMG_Wheels.jpg";
+import audiRsWheels from "@/assets/Audi_Rs_Wheels.jpg";
+
 
 // Performance Parts imports
 import perfSuspension from "@/assets/Performance_Parts_Suspension_System.jpg";
@@ -310,113 +281,23 @@ const hoodFenderProducts = [{
 }];
 
 const wheelsRimsProducts = [{
-  image: bmwWheels21,
+  image: bmwMWheels1,
   title: "Bmw M Wheels 1"
 }, {
-  image: bmwWheels2,
+  image: bmwMWheels2,
   title: "Bmw M Wheels 2"
 }, {
-  image: bmwWheels3,
+  image: bmwMWheels3,
   title: "Bmw M Wheels 3"
 }, {
-  image: bmwWheels4,
+  image: bmwMWheels4,
   title: "Bmw M Wheels 4"
 }, {
-  image: bmwWheels5,
-  title: "Bmw M Wheels 5"
+  image: mercedesAmgWheels,
+  title: "Mercedes Benz AMG Wheels"
 }, {
-  image: bmwWheels6,
-  title: "Bmw M Wheels 6"
-}, {
-  image: bmwWheels7,
-  title: "Bmw M Wheels 7"
-}, {
-  image: bmwWheels8,
-  title: "Bmw M Wheels 8"
-}, {
-  image: bmwWheels9,
-  title: "Bmw M Wheels 9"
-}, {
-  image: bmwWheels10,
-  title: "Bmw M Wheels 10"
-}, {
-  image: bmwWheels11,
-  title: "Bmw M Wheels 11"
-}, {
-  image: bmwWheels12,
-  title: "Bmw M Wheels 12"
-}, {
-  image: bmwWheels13,
-  title: "Bmw M Wheels 13"
-}, {
-  image: bmwWheels14,
-  title: "Bmw M Wheels 14"
-}, {
-  image: bmwWheels15,
-  title: "Bmw M Wheels 15"
-}, {
-  image: bmwWheels16,
-  title: "Bmw M Wheels 16"
-}, {
-  image: bmwWheels17,
-  title: "Bmw M Wheels 17"
-}, {
-  image: bmwWheels18,
-  title: "Bmw M Wheels 18"
-}, {
-  image: bmwWheels19,
-  title: "Bmw M Wheels 19"
-}, {
-  image: bmwWheels20,
-  title: "Bmw M Wheels 20"
-}, {
-  image: mercedesWheels1,
-  title: "Mercedes Benz AMG Wheels 1"
-}, {
-  image: mercedesWheels2,
-  title: "Mercedes Benz AMG Wheels 2"
-}, {
-  image: mercedesWheels3,
-  title: "Mercedes Benz AMG Wheels 3"
-}, {
-  image: mercedesWheels4,
-  title: "Mercedes Benz AMG Wheels 4"
-}, {
-  image: mercedesWheels5,
-  title: "Mercedes Benz AMG Wheels 5"
-}, {
-  image: mercedesWheels6,
-  title: "Mercedes Benz AMG Wheels 6"
-}, {
-  image: mercedesWheels7,
-  title: "Mercedes Benz AMG Wheels 7"
-}, {
-  image: mercedesWheels8,
-  title: "Mercedes Benz AMG Wheels 8"
-}, {
-  image: mercedesWheels9,
-  title: "Mercedes Benz AMG Wheels 9"
-}, {
-  image: mercedesWheels10,
-  title: "Mercedes Benz AMG Wheels 10"
-}, {
-  image: mercedesBrabusWheels11,
-  title: "Mercedes Benz Brabus Wheels 11"
-}, {
-  image: mercedesMaybachWheels12,
-  title: "Mercedes Benz Maybach Wheels 12"
-}, {
-  image: audiWheels1,
-  title: "Audi Rs Wheels 1"
-}, {
-  image: audiWheels2,
-  title: "Audi Rs Wheels 2"
-}, {
-  image: audiWheels3,
-  title: "Audi Rs Wheels 3"
-}, {
-  image: audiWheels4,
-  title: "Audi Rs Wheels 4"
+  image: audiRsWheels,
+  title: "Audi Rs Wheels"
 }];
 
 const performancePartsProducts = [{
