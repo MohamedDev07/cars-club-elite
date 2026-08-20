@@ -80,7 +80,6 @@ const carBrands: Brand[] = [
     models: [
       { name: "718", code: "GT4", hasBodyKit: true },
       { name: "911", code: "GT3", hasBodyKit: true },
-      { name: "981", code: "GT4 RS", hasBodyKit: true },
     ]
   }
 ];
