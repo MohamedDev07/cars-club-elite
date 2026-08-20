@@ -102,7 +102,7 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel, brandName: string) => {
-    const searchTerm = model.code ? model.code : model.name;
+    const searchTerm = model.code ? `${model.name} ${model.code}` : model.name;
     onSelectModel(searchTerm, brandName);
     onClose();
   };
