@@ -281,113 +281,23 @@ const hoodFenderProducts = [{
 }];
 
 const wheelsRimsProducts = [{
-  image: bmwWheels21,
+  image: bmwMWheels1,
   title: "Bmw M Wheels 1"
 }, {
-  image: bmwWheels2,
+  image: bmwMWheels2,
   title: "Bmw M Wheels 2"
 }, {
-  image: bmwWheels3,
+  image: bmwMWheels3,
   title: "Bmw M Wheels 3"
 }, {
-  image: bmwWheels4,
+  image: bmwMWheels4,
   title: "Bmw M Wheels 4"
 }, {
-  image: bmwWheels5,
-  title: "Bmw M Wheels 5"
+  image: mercedesAmgWheels,
+  title: "Mercedes Benz AMG Wheels"
 }, {
-  image: bmwWheels6,
-  title: "Bmw M Wheels 6"
-}, {
-  image: bmwWheels7,
-  title: "Bmw M Wheels 7"
-}, {
-  image: bmwWheels8,
-  title: "Bmw M Wheels 8"
-}, {
-  image: bmwWheels9,
-  title: "Bmw M Wheels 9"
-}, {
-  image: bmwWheels10,
-  title: "Bmw M Wheels 10"
-}, {
-  image: bmwWheels11,
-  title: "Bmw M Wheels 11"
-}, {
-  image: bmwWheels12,
-  title: "Bmw M Wheels 12"
-}, {
-  image: bmwWheels13,
-  title: "Bmw M Wheels 13"
-}, {
-  image: bmwWheels14,
-  title: "Bmw M Wheels 14"
-}, {
-  image: bmwWheels15,
-  title: "Bmw M Wheels 15"
-}, {
-  image: bmwWheels16,
-  title: "Bmw M Wheels 16"
-}, {
-  image: bmwWheels17,
-  title: "Bmw M Wheels 17"
-}, {
-  image: bmwWheels18,
-  title: "Bmw M Wheels 18"
-}, {
-  image: bmwWheels19,
-  title: "Bmw M Wheels 19"
-}, {
-  image: bmwWheels20,
-  title: "Bmw M Wheels 20"
-}, {
-  image: mercedesWheels1,
-  title: "Mercedes Benz AMG Wheels 1"
-}, {
-  image: mercedesWheels2,
-  title: "Mercedes Benz AMG Wheels 2"
-}, {
-  image: mercedesWheels3,
-  title: "Mercedes Benz AMG Wheels 3"
-}, {
-  image: mercedesWheels4,
-  title: "Mercedes Benz AMG Wheels 4"
-}, {
-  image: mercedesWheels5,
-  title: "Mercedes Benz AMG Wheels 5"
-}, {
-  image: mercedesWheels6,
-  title: "Mercedes Benz AMG Wheels 6"
-}, {
-  image: mercedesWheels7,
-  title: "Mercedes Benz AMG Wheels 7"
-}, {
-  image: mercedesWheels8,
-  title: "Mercedes Benz AMG Wheels 8"
-}, {
-  image: mercedesWheels9,
-  title: "Mercedes Benz AMG Wheels 9"
-}, {
-  image: mercedesWheels10,
-  title: "Mercedes Benz AMG Wheels 10"
-}, {
-  image: mercedesBrabusWheels11,
-  title: "Mercedes Benz Brabus Wheels 11"
-}, {
-  image: mercedesMaybachWheels12,
-  title: "Mercedes Benz Maybach Wheels 12"
-}, {
-  image: audiWheels1,
-  title: "Audi Rs Wheels 1"
-}, {
-  image: audiWheels2,
-  title: "Audi Rs Wheels 2"
-}, {
-  image: audiWheels3,
-  title: "Audi Rs Wheels 3"
-}, {
-  image: audiWheels4,
-  title: "Audi Rs Wheels 4"
+  image: audiRsWheels,
+  title: "Audi Rs Wheels"
 }];
 
 const performancePartsProducts = [{
