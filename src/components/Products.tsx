@@ -324,8 +324,11 @@ const Products = () => {
   const [isSearching, setIsSearching] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleSidebarSelect = (term: string) => {
+  const [sidebarBrand, setSidebarBrand] = useState<string>("");
+
+  const handleSidebarSelect = (term: string, brand?: string) => {
     setSearchTerm(term);
+    setSidebarBrand(brand ?? "");
     setIsSearching(true);
     setSelectedBrand("All");
     setCurrentPage(1);
@@ -341,12 +344,14 @@ const Products = () => {
     setCurrentPage(1);
     setIsSearching(false);
     setSearchTerm("");
+    setSidebarBrand("");
   };
 
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
     setCurrentPage(1);
     setIsSearching(value.length > 0);
+    setSidebarBrand("");
     if (value.length > 0) setSelectedBrand("All");
   };
 
@@ -369,11 +374,15 @@ const Products = () => {
   const filteredProducts = useMemo(() => {
     const productsToFilter = isSearching ? allProducts : currentProducts;
     return productsToFilter.filter(product => {
-      const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const brandKeyword = sidebarBrand.toLowerCase().replace(" benz", "");
+      const isBrandWheel = !!sidebarBrand
+        && (product as { category?: string }).category === "Sports Wheels Rims"
+        && product.title.toLowerCase().includes(brandKeyword);
+      const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) || isBrandWheel;
       const matchesBrand = selectedBrand === "All" || product.title.toLowerCase().includes(selectedBrand.toLowerCase());
       return matchesSearch && matchesBrand;
     });
-  }, [currentProducts, allProducts, searchTerm, selectedBrand, isSearching]);
+  }, [currentProducts, allProducts, searchTerm, selectedBrand, isSearching, sidebarBrand]);
 
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   
