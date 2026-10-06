@@ -60,7 +60,7 @@ import porsche718Gt4 from "@/assets/Porsche_718_Gt4_Body_Kit.jpg";
 import porsche911Gt3 from "@/assets/Porsche_911_Gt3_Body_Kit.jpg";
 import bmw5_G60_Lci from "@/assets/BMW_5-Series_G60_Lci_M5_Body_Kit.jpg";
 import mercedesE_W214 from "@/assets/Mercedes_Benz_E-Class_W214_E63_AMG_Body_Kit.jpg";
-import mercedesX290Asset from "@/assets/Mercedes_Benz_X290_Gt63s_Body_Kit.jpg.asset.json";
+import mercedesX290 from "@/assets/Mercedes_Benz_X290_Gt63s_Body_Kit.jpg";
 
 
 // Hood & Fender imports
@@ -219,7 +219,7 @@ const bodyKitProducts = [{
   image: mercedesE_W214,
   title: "Mercedes Benz E-Class W214 E63 AMG Body Kit"
 }, {
-  image: mercedesX290Asset.url,
+  image: mercedesX290,
   title: "Mercedes Benz X290 Gt63s Body Kit"
 }, {
   image: mercedesG_W464,
