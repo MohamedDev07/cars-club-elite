@@ -8,6 +8,7 @@ interface CarModel {
   hasBodyKit?: boolean;
   hasHoodFender?: boolean;
   hoodFenderStyle?: string; // e.g., "M3", "M5", "GTS", "GTR", "CS", "C63", "E63"
+  searchTerm?: string; // overrides the default "name code" search term
 }
 
 interface Brand {
@@ -70,6 +71,7 @@ const carBrands: Brand[] = [
       // Hidden: { name: "E-Class", code: "W213 FaceLift", hasBodyKit: true, hasHoodFender: true, hoodFenderStyle: "E63" },
       { name: "E-Class", code: "W214", hasBodyKit: true },
       { name: "G-Class", code: "W464", hasBodyKit: true },
+      { name: "GT", code: "X290", hasBodyKit: true, searchTerm: "X290 Gt63s" },
       // Hidden: { name: "GLC-Class", code: "X253", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X253 FaceLift", hasBodyKit: true },
       // Hidden: { name: "GLC-Class", code: "X254", hasBodyKit: true },
@@ -102,7 +104,8 @@ const CarModelsSidebar = ({ isOpen, onClose, onSelectModel }: CarModelsSidebarPr
   };
 
   const handleModelClick = (model: CarModel, brandName: string) => {
-    const searchTerm = model.code ? `${model.name} ${model.code}` : model.name;
+    const searchTerm = model.searchTerm
+      ?? (model.code ? `${model.name} ${model.code}` : model.name);
     onSelectModel(searchTerm, brandName);
     onClose();
   };
