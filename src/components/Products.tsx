@@ -388,13 +388,16 @@ const Products = () => {
     const searchTokens = searchTerm.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return productsToFilter.filter(product => {
       const brandKeyword = sidebarBrand.toLowerCase().replace(" benz", "");
-      const isBrandWheel = !!sidebarBrand
-        && (product as { category?: string }).category === "Sports Wheels Rims"
+      const productCategory = (product as { category?: string }).category;
+      // Selecting a car model in the sidebar also surfaces that brand's
+      // wheels and hood & fender products, matching the brand keyword.
+      const isBrandAccessory = !!sidebarBrand
+        && (productCategory === "Sports Wheels Rims" || productCategory === "Sports Hood & Sports Fender")
         && product.title.toLowerCase().includes(brandKeyword);
       const titleTokens = product.title.toLowerCase().split(/\s+/);
       const matchesSearch = searchTokens.length === 0
         || searchTokens.every(token => titleTokens.includes(token))
-        || isBrandWheel;
+        || isBrandAccessory;
       const matchesBrand = selectedBrand === "All" || product.title.toLowerCase().includes(selectedBrand.toLowerCase());
       return matchesSearch && matchesBrand;
     });
