@@ -391,10 +391,14 @@ const Products = () => {
       const productCategory = (product as { category?: string }).category;
       // Selecting a car model in the sidebar also surfaces that brand's
       // wheels and hood & fender products, matching the brand keyword.
-      const isBrandAccessory = !!sidebarBrand
-        && (productCategory === "Sports Wheels Rims" || productCategory === "Sports Hood & Sports Fender")
-        && product.title.toLowerCase().includes(brandKeyword);
       const titleTokens = product.title.toLowerCase().split(/\s+/);
+      // Hood & fender titles carry only the chassis code (e.g. "G30"), so
+      // match them on the selected model's code — the last search token.
+      const chassisCode = searchTokens[searchTokens.length - 1];
+      const isBrandAccessory = !!sidebarBrand && (
+        (productCategory === "Sports Wheels Rims" && product.title.toLowerCase().includes(brandKeyword))
+        || (productCategory === "Sports Hood & Sports Fender" && !!chassisCode && titleTokens.includes(chassisCode))
+      );
       const matchesSearch = searchTokens.length === 0
         || searchTokens.every(token => titleTokens.includes(token))
         || isBrandAccessory;
